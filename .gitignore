@@ -71,3 +71,7 @@ screenshots/
 # Experimental / unused pages
 dark-dashboard.html
 variant-1.html
+
+# Internal notes / summaries (not part of the shipped product)
+STATUS_SUMMARY.md
+DEPLOYMENT_GUIDE.md
