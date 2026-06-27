@@ -34,12 +34,19 @@ Thumbs.db
 # Dependencies
 node_modules/
 
+# Build output
+dist/
+
+# Wrangler / Cloudflare generated files
+wrangler.jsonc
+wrangler.toml
+.cloudflare/
+
 # Temporary / debug / fix scripts
 *.py
 *.mjs
 *.js
 !package.json
-!package-lock.json
 
 # Test files
 test_*

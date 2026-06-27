@@ -1,5 +1,8 @@
 {
-  "dependencies": {
-    "playwright": "^1.61.1"
+  "name": "kaoyan-math-notebook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp \"回甘—考研数学智题本.html\" index.html dist/"
   }
 }
