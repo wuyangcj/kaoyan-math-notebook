@@ -33,3 +33,41 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+
+# Temporary / debug / fix scripts
+*.py
+*.mjs
+*.js
+!package.json
+!package-lock.json
+
+# Test files
+test_*
+verify_*
+check_*
+search_*
+analyze_*
+debug_*
+find_*
+detect_*
+dry_run_*
+fix_*
+import_*.py
+import_*.js
+move_*.js
+generate_*.py
+rename_*.py
+auto_fix_*.py
+add_*.py
+
+# Intermediate data / errors
+collected_*.json
+question_errors_*.json
+real_exam_*.json
+
+# Screenshots
+screenshots/
+
+# Experimental / unused pages
+dark-dashboard.html
+variant-1.html
