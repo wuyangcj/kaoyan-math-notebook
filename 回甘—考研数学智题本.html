@@ -91,6 +91,8 @@
         body:has(.auth-page:not([style*="display: none"])) {
             overflow: hidden;
             height: 100vh;
+            /* 修复 iOS Safari 地址栏动态显隐导致的溢出 */
+            height: 100dvh;
         }
 
         ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -112,6 +114,8 @@
         /* ========== 登录页（左品牌 + 右表单） ========== */
         .auth-page {
             height: 100vh;
+            /* 修复 iOS Safari 地址栏动态显隐导致的溢出 */
+            height: 100dvh;
             display: flex;
             position: relative;
             overflow-y: auto;
@@ -307,8 +311,8 @@
 
         .btn {
             width: 100%;
-            min-height: 36px;
-            padding: 0.5rem 1.5rem;
+            min-height: 44px;
+            padding: 0.6rem 1.5rem;
             border: none;
             border-radius: var(--radius-sm);
             font-size: 0.95rem;
@@ -320,6 +324,8 @@
             justify-content: center;
             gap: 0.5rem;
             font-family: inherit;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .btn-primary {
@@ -2228,14 +2234,16 @@
         }
 
         @media (max-width: 768px) {
-            .auth-page { flex-direction: column; height: 100vh; overflow-y: auto; }
+            .auth-page { flex-direction: column; height: 100vh; height: 100dvh; overflow-y: auto; }
             .auth-brand { padding: 1.5rem 1rem; text-align: center; }
             .auth-brand-features { justify-content: center; }
-            .auth-form-side { width: 100%; padding: 1rem; }
+            .auth-form-side { width: 100%; padding: 1rem; overflow-y: visible; flex-shrink: 0; }
             .auth-brand-logo { font-size: 3rem; }
             .auth-brand-quote { font-size: 1.1rem; margin: 0 auto; max-width: 90%; }
             .auth-brand-slogan { font-size: 1rem; margin-bottom: 1rem; }
             .auth-brand-features { margin-top: 1rem; gap: 1rem; }
+            .auth-card { padding: 1.5rem; }
+            .form-group { margin-bottom: 0.75rem; }
             .page { padding: 1rem; }
             .math-type-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
@@ -3119,11 +3127,11 @@
                 <div class="auth-error" id="authErrorReg"></div>
                 <div class="form-group">
                     <label>用户名</label>
-                    <input type="text" class="form-input no-chinese" id="regUsername" placeholder="字母、数字、特殊符号" autocomplete="off">
+                    <input type="text" class="form-input no-chinese" id="regUsername" placeholder="字母、数字、特殊符号" autocomplete="off" onkeydown="if(event.key==='Enter')register()">
                 </div>
                 <div class="form-group">
                     <label>密码</label>
-                    <input type="password" class="form-input no-chinese" id="regPassword" placeholder="设置密码（至少6位）" autocomplete="off">
+                    <input type="password" class="form-input no-chinese" id="regPassword" placeholder="设置密码（至少6位）" autocomplete="off" onkeydown="if(event.key==='Enter')register()">
                 </div>
                 <div class="form-group">
                     <label>确认密码</label>
@@ -44668,15 +44676,25 @@ function showAuthError(msg, isReg) {
     el.classList.add('show');
 }
 
+// 登录防抖标志：防止 Enter 键或快速点击重复触发 login()
+let _loginInProgress = false;
+
 async function login() {
     const username = document.getElementById('loginUsername').value.trim();
     const password = document.getElementById('loginPassword').value;
     if (!username || !password) { showAuthError('请输入用户名和密码'); return; }
 
+    // 防抖：如果登录正在进行中，直接返回
+    if (_loginInProgress) return;
+    _loginInProgress = true;
+
     // 显示登录中状态
     const loginBtn = document.querySelector('#loginForm .btn-primary');
     if (loginBtn) { loginBtn.disabled = true; loginBtn.textContent = '登录中...'; }
-    const restoreBtn = () => { if (loginBtn) { loginBtn.disabled = false; loginBtn.textContent = '登录'; } };
+    const restoreBtn = () => {
+        if (loginBtn) { loginBtn.disabled = false; loginBtn.textContent = '登录'; }
+        _loginInProgress = false;
+    };
 
     try {
     // 计算输入密码的哈希（用于与云端比对）
@@ -44858,9 +44876,11 @@ function initNoChineseInputs() {
         });
         // input 事件兜底过滤
         input.addEventListener('input', () => validateNoChinese(input));
-        // keydown 拦截中文输入法按键
+        // keydown 拦截中文输入法按键（keyCode 229 = IME 组合输入中）
+        // 注意：不拦截 197（部分安卓机型为正常按键），避免误拦
+        // 退格(8)、回车(13)、方向键(37-40)等正常按键不拦截
         input.addEventListener('keydown', e => {
-            if (e.keyCode === 229 || e.keyCode === 197) {
+            if (e.keyCode === 229 && e.key !== 'Backspace' && e.key !== 'Enter' && !e.key.startsWith('Arrow')) {
                 e.preventDefault();
             }
         });
