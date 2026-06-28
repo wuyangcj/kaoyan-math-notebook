@@ -203,9 +203,9 @@
             width: 480px;
             max-width: 100%;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
-            padding: 10vh 2rem;
+            padding: 2rem;
             position: relative;
             z-index: 1;
             overflow-y: auto;
@@ -7966,11 +7966,11 @@ const questionBank = {
             "source": "自建题目",
             "page": "P111",
             "type": "解答题",
-            "content": "计算三重积分 \\iiint_\\Omega z \\, dxdydz，其中 \\Omega 由球面 x^2 + y^2 + z^2 \\leq 1 和锥面 z = \\sqrt{x^2 + y^2} 围成（z \\geq 0 部分）。",
-            "formula": "\\iiint_\\Omega z \\, dxdydz",
+            "content": "计算三重积分 \\iiint_{\\Omega} z \\, dxdydz，其中 \\Omega 由球面 x^2 + y^2 + z^2 \\leq 1 和锥面 z = \\sqrt{x^2 + y^2} 围成（z \\geq 0 部分）。",
+            "formula": "\\iiint_{\\Omega} z \\, dxdydz",
             "options": [],
             "answer": "\\frac{\\pi}{8}",
-            "analysis": "用球坐标：x = r\\sin\\varphi\\cos\\theta, y = r\\sin\\varphi\\sin\\theta, z = r\\cos\\varphi, dV = r^2 \\sin\\varphi \\, dr \\, d\\varphi \\, d\\theta。\n球面与锥面交线：z = \\sqrt{x^2+y^2} 代入 x^2+y^2+z^2=1 得 2z^2 = 1, z = \\frac{\\sqrt{2}}{2}，对应 \\varphi = \\frac{\\pi}{4}。\n\\Omega: 0 \\leq \\theta \\leq 2\\pi, 0 \\leq \\varphi \\leq \\frac{\\pi}{4}, 0 \\leq r \\leq 1。\n\\iiint_\\Omega z \\, dV = \\int_{0}^{2\\pi} d\\theta \\int_{0}^{\\frac{\\pi}{4}} d\\varphi \\int_{0}^{1} r\\cos\\varphi \\cdot r^2 \\sin\\varphi \\, dr = 2\\pi \\int_{0}^{\\frac{\\pi}{4}} \\sin\\varphi\\cos\\varphi \\, d\\varphi \\int_{0}^{1} r^3 \\, dr = 2\\pi \\cdot \\frac{1}{2}\\sin^2\\varphi \\Big|_0^{\\frac{\\pi}{4}} \\cdot \\frac{1}{4} = 2\\pi \\cdot \\frac{1}{4} \\cdot \\frac{1}{4} = \\frac{\\pi}{8}。",
+            "analysis": "用球坐标：x = r\\sin\\varphi\\cos\\theta, y = r\\sin\\varphi\\sin\\theta, z = r\\cos\\varphi, dV = r^2 \\sin\\varphi \\, dr \\, d\\varphi \\, d\\theta。\n球面与锥面交线：z = \\sqrt{x^2+y^2} 代入 x^2+y^2+z^2=1 得 2z^2 = 1, z = \\frac{\\sqrt{2}}{2}，对应 \\varphi = \\frac{\\pi}{4}。\n\\Omega: 0 \\leq \\theta \\leq 2\\pi, 0 \\leq \\varphi \\leq \\frac{\\pi}{4}, 0 \\leq r \\leq 1。\n\\iiint_{\\Omega} z \\, dV = \\int_{0}^{2\\pi} d\\theta \\int_{0}^{\\frac{\\pi}{4}} d\\varphi \\int_{0}^{1} r\\cos\\varphi \\cdot r^2 \\sin\\varphi \\, dr = 2\\pi \\int_{0}^{\\frac{\\pi}{4}} \\sin\\varphi\\cos\\varphi \\, d\\varphi \\int_{0}^{1} r^3 \\, dr = 2\\pi \\cdot \\frac{1}{2}\\sin^2\\varphi \\Big|_0^{\\frac{\\pi}{4}} \\cdot \\frac{1}{4} = 2\\pi \\cdot \\frac{1}{4} \\cdot \\frac{1}{4} = \\frac{\\pi}{8}。",
             "hint": {
                         "knowledgePoints": [
                                     "三重积分",
@@ -9432,7 +9432,7 @@ const questionBank = {
             subject: "线代",
             type: "选择题",
             difficulty: 2,
-            content: "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}\\) 为 \\(A\\) 的属于特征值 1 的线性无关的特征向量，\\(\\alpha_{4}\\) 为 \\(A\\) 的属于特征值 \\(-1\\) 的特征向量，则满足 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\\)\\) 的可逆矩阵 \\(P\\) 为（ ）。",
+            content: "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}\\) 为 \\(A\\) 的属于特征值 1 的线性无关的特征向量，\\(\\alpha_{4}\\) 为 \\(A\\) 的属于特征值 \\(-1\\) 的特征向量，则满足 \\(P^{-1}AP = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\\) 的可逆矩阵 \\(P\\) 为（ ）。",
             options: ["A. \\((\\alpha_{1}, \\alpha_{2}, \\alpha_{3})\\)", "B. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{2}, \\alpha_{3})\\)", "C. \\((\\alpha_{1} + \\alpha_{3}, \\alpha_{3}, \\alpha_{2})\\)", "D. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{3}, \\alpha_{2})\\)"],
             answer: "D",
             analysis: "对角矩阵对角线元素为 \\(1, -1, 1\\)，故 \\(P\\) 的第 2 列应为属于特征值 \\(-1\\) 的特征向量 \\(\\alpha_{4}\\) 的线性组合，第 1、3 列为属于特征值 1 的特征向量的线性组合。根据选项分析，选 D。",
@@ -11461,7 +11461,7 @@ const questionBank = {
             content: "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)，\\(B = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\)，则 \\(AB = \\)（ ）。",
             options: ["A. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)", "B. \\(\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "C. \\(\\begin{pmatrix} 0 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "D. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)"],
             answer: "A",
-            analysis: "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)\\)。选 A。",
+            analysis: "\\(AB = \\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix} = \\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)。选 A。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "矩阵乘法"],
@@ -11476,7 +11476,7 @@ const questionBank = {
             difficulty: 3,
             content: "设 \\(A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}\\)，则 \\(A^{2} = \\) ____。",
             answer: "$\\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)$",
-            analysis: "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)\\)。",
+            analysis: "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix} = \\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "矩阵幂", "对角矩阵"],
@@ -11507,7 +11507,7 @@ const questionBank = {
             difficulty: 3,
             content: "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 7 \\end{pmatrix}\\)，则 \\(A^{-1} = \\) ____。",
             answer: "$\\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)$",
-            analysis: "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)\\)。",
+            analysis: "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} = \\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "逆矩阵"],
@@ -11538,7 +11538,7 @@ const questionBank = {
             difficulty: 3,
             content: "设 \\(A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)，则 \\(A^{10} = \\) ____。",
             answer: "$\\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)$",
-            analysis: "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)\\)。",
+            analysis: "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "幂等矩阵", "矩阵幂"],
@@ -11554,7 +11554,7 @@ const questionBank = {
             content: "下列矩阵中不是正交矩阵的是（ ）。",
             options: ["A. \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}\\)", "B. \\(\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\)", "C. \\(\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}\\)", "D. \\(\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}\\)"],
             answer: "C",
-            analysis: "正交矩阵满足 \\(A^{T}A = I\\)。C 选项 \\(A^{T}A = \\(\\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\end{pmatrix}\\) \\neq I\\)，不是正交矩阵。选 C。",
+            analysis: "正交矩阵满足 \\(A^{T}A = I\\)。C 选项 \\(A^{T}A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\end{pmatrix} \\neq I\\)，不是正交矩阵。选 C。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "正交矩阵"],
@@ -11569,7 +11569,7 @@ const questionBank = {
             difficulty: 4,
             content: "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 5 \\end{pmatrix}\\)，求 \\(A^{*} = \\) ____。",
             answer: "$\\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)$",
-            analysis: "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\)\\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)\\)。",
+            analysis: "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\)。故 \\(A^{*} = \\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "伴随矩阵"],
@@ -11600,7 +11600,7 @@ const questionBank = {
             difficulty: 4,
             content: "设 \\(A = \\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}\\)，则 \\(A^{n} = \\) ____（\\(n\\) 为正整数）。",
             answer: "$\\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)$",
-            analysis: "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)\\)。",
+            analysis: "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["矩阵", "矩阵幂", "若尔当块"],
@@ -11832,7 +11832,7 @@ const questionBank = {
             difficulty: 4,
             content: "矩阵 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 4 \\end{pmatrix}\\) 的特征值为 ____。",
             answer: "$\\lambda_{1}=0, \\lambda_{2}=5$",
-            analysis: "特征方程 \\(|\\lambda I - A| = \\(\\begin{vmatrix} \\lambda-1 & -2 \\\\ -2 & \\lambda-4 \\end{vmatrix}\\) = (\\lambda-1)(\\lambda-4) - 4 = \\lambda^{2} - 5\\lambda = \\lambda(\\lambda-5) = 0\\)。故 \\(\\lambda_{1}=0\\)，\\(\\lambda_{2}=5\\)。",
+            analysis: "特征方程 \\(|\\lambda I - A| = \\begin{vmatrix} \\lambda-1 & -2 \\\\ -2 & \\lambda-4 \\end{vmatrix} = (\\lambda-1)(\\lambda-4) - 4 = \\lambda^{2} - 5\\lambda = \\lambda(\\lambda-5) = 0\\)。故 \\(\\lambda_{1}=0\\)，\\(\\lambda_{2}=5\\)。",
             source: "自建题目",
             hint: {
                 knowledgePoints: ["特征值", "特征方程"],
@@ -12702,7 +12702,7 @@ const questionBank = {
             "content": "曲线 \\(y = x + e^{\\frac{\\ln x}{1-x}}\\) 的渐近线方程为（ ）。",
             "options": ["A. \\(y = x + e\\)", "B. \\(y = x + 1/e\\)", "C. \\(y = x\\)", "D. \\(y = x - 1/e\\)"],
             "answer": "B",
-            "analysis": "计算斜渐近线：\\(k = \\lim_{x \\to \\infty} \\frac{y}{x} = 1\\)，\\(b = \\lim_{x \\to \\infty} e^{\\frac{\\ln x}{1-x}} = e^{-1} = \\frac{1}{e\\})。所以斜渐近线方程为 \\(y = x + \\frac{1}{e\\})。",
+            "analysis": "计算斜渐近线：\\(k = \\lim_{x \\to \\infty} \\frac{y}{x} = 1\\)，\\(b = \\lim_{x \\to \\infty} e^{\\frac{\\ln x}{1-x}} = e^{-1} = \\frac{1}{e\\})。所以斜渐近线方程为 y = x + \\frac{1}{e\\})。",
             "source": "真题模拟题",
             "year": "2023",
             "paper": "数学二",
@@ -12713,10 +12713,10 @@ const questionBank = {
             "mathType": "shuer",
             "type": "选择题",
             "difficulty": 2,
-            "content": "函数 \\(f(x) = \\begin{cases} x^{2}, & x \\leq 0 \\\\ 1 + \\cos x - 1, & x > 0 \\end{cases}\\) 的原函数为（ ）。",
-            "options": ["A. \\(F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}), & x \\leq 0 \\\\ x + \\sin x - \\cos x, & x > 0 \\end{cases}\\)", "B. \\(F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}) + 1, & x \\leq 0 \\\\ x + \\sin x - \\cos x, & x > 0 \\end{cases}\\)", "C. \\(F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}), & x \\leq 0 \\\\ x - \\sin x + \\cos x, & x > 0 \\end{cases}\\)", "D. \\(F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}) + 1, & x \\leq 0 \\\\ x - \\sin x + \\cos x, & x > 0 \\end{cases}\\)"],
+            "content": "函数 f(x) = \\begin{cases} x^{2}, & x \\leq 0 \\\\ 1 + \\cos x - 1, & x > 0 \\end{cases} 的原函数为（ ）。",
+            "options": ["A. F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}), & x \\leq 0 \\\\ x + \\sin x - \\cos x, & x > 0 \\end{cases}", "B. F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}) + 1, & x \\leq 0 \\\\ x + \\sin x - \\cos x, & x > 0 \\end{cases}", "C. F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}), & x \\leq 0 \\\\ x - \\sin x + \\cos x, & x > 0 \\end{cases}", "D. F(x) = \\begin{cases} \\frac{1}{3}x^{3} + \\ln(1+x^{2}) + 1, & x \\leq 0 \\\\ x - \\sin x + \\cos x, & x > 0 \\end{cases}"],
             "answer": "B",
-            "analysis": "分别对 \\(x \\leq 0\\) 和 \\(x > 0\\) 两段求不定积分，并利用原函数在 \\(x=0\\) 处连续确定常数，可得选项 B。",
+            "analysis": "分别对 x \\leq 0 和 \\(x > 0 两段求不定积分，并利用原函数在 \\(x=0\\) 处连续确定常数，可得选项 B。",
             "source": "真题模拟题",
             "year": "2023",
             "paper": "数学二",
@@ -14213,7 +14213,7 @@ const questionBank = {
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)，\\(B = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\)，则 \\(AB = \\)（ ）。",
             "options": ["A. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)", "B. \\(\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "C. \\(\\begin{pmatrix} 0 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "D. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)"],
             "answer": "A",
-            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)\\)。选 A。",
+            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\)。选 A。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵乘法"],
@@ -14229,7 +14229,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}\\)，则 \\(A^{2} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)$",
-            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)\\)。",
+            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "对角矩阵"],
@@ -14262,7 +14262,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 7 \\end{pmatrix}\\)，则 \\(A^{-1} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)$",
-            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "逆矩阵"],
@@ -14295,7 +14295,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)，则 \\(A^{10} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)$",
-            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "幂等矩阵", "矩阵幂"],
@@ -14328,7 +14328,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 5 \\end{pmatrix}\\)，求 \\(A^{*} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)$",
-            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\)\\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "伴随矩阵"],
@@ -14361,7 +14361,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}\\)，则 \\(A^{n} = \\) ____（\\(n\\) 为正整数）。",
             "answer": "$\\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)$",
-            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)\\)。",
+            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "若尔当块"],
@@ -14955,7 +14955,7 @@ const questionBank = {
             "mathType": "shusan",
             "type": "选择题",
             "difficulty": 2,
-            "content": "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}\\) 为 \\(A\\) 的属于特征值 1 的线性无关的特征向量，\\(\\alpha_{4}\\) 为 \\(A\\) 的属于特征值 \\(-1\\) 的特征向量，则满足 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\\)\\) 的可逆矩阵 \\(P\\) 为（ ）。",
+            "content": "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}\\) 为 \\(A\\) 的属于特征值 1 的线性无关的特征向量，\\(\\alpha_{4}\\) 为 \\(A\\) 的属于特征值 \\(-1\\) 的特征向量，则满足 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\) 的可逆矩阵 \\(P\\) 为（ ）。",
             "options": ["A. \\((\\alpha_{1}, \\alpha_{2}, \\alpha_{3})\\)", "B. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{2}, \\alpha_{3})\\)", "C. \\((\\alpha_{1} + \\alpha_{3}, \\alpha_{3}, \\alpha_{2})\\)", "D. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{3}, \\alpha_{2})\\)"],
             "answer": "D",
             "analysis": "对角矩阵对角线元素为 \\(1, -1, 1\\)，故 \\(P\\) 的第 2 列应为属于特征值 \\(-1\\) 的特征向量 \\(\\alpha_{4}\\) 的线性组合，第 1、3 列为属于特征值 1 的特征向量的线性组合。根据选项分析，选 D。",
@@ -15182,7 +15182,7 @@ const questionBank = {
             "content": "设 \\(X_{1}, X_{2}, \\ldots, X_{n}\\) 为取自于总体 \\(N(\\mu, \\sigma^{2})\\) 的简单随机样本，令 \\(\\bar{X} = \\frac{1}{n}\\sum X_{i}\\)，则下列选项正确的是（ ）。",
             "options": ["A. \\(\\frac{\\bar{X} - \\mu}{\\sigma} \\sim N(0, 1)\\)", "B. \\(\\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} \\sim N(0, 1)\\)", "C. \\(\\frac{\\bar{X} - \\mu}{S} \\sim t(n)\\)", "D. \\(\\frac{(n-1)S^{2}}{\\sigma^{2}} \\sim \\chi^{2}(n)\\)"],
             "answer": "B",
-            "analysis": "由于 \\(\\bar{X} \\sim N(\\mu, \\frac{\\sigma^{2}}{n})\\)，且 \\(\\bar{X}\\) 与 \\(S^{2}\\) 相互独立，由标准正态分布定义，\\(\\frac{\\bar{X} - \\mu}{\\frac{\\sigma}{\\sqrt}{n}} \\sim N(0, 1)\\)。选 B。",
+            "analysis": "由于 \\(\\bar{X} \\sim N(\\mu, \\frac{\\sigma^{2}}{n})\\)，且 \\(\\bar{X}\\) 与 \\(S^{2}\\) 相互独立，由标准正态分布定义，\\(\\frac{\\bar{X} - \\mu}{\\frac{\\sigma}{\\sqrt{n}} \\sim N(0, 1)\\)。选 B。",
             "source": "真题模拟题",
             "year": "2018",
             "paper": "数学三",
@@ -16455,7 +16455,7 @@ const questionBank = {
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)，\\(B = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\)，则 \\(AB = \\)（ ）。",
             "options": ["A. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)", "B. \\(\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "C. \\(\\begin{pmatrix} 0 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "D. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)"],
             "answer": "A",
-            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)\\)。选 A。",
+            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\)。选 A。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵乘法"],
@@ -16471,7 +16471,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}\\)，则 \\(A^{2} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)$",
-            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)\\)。",
+            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "对角矩阵"],
@@ -16504,7 +16504,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 7 \\end{pmatrix}\\)，则 \\(A^{-1} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)$",
-            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "逆矩阵"],
@@ -16537,7 +16537,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)，则 \\(A^{10} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)$",
-            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "幂等矩阵", "矩阵幂"],
@@ -16570,7 +16570,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 5 \\end{pmatrix}\\)，求 \\(A^{*} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)$",
-            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\)\\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "伴随矩阵"],
@@ -16603,7 +16603,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}\\)，则 \\(A^{n} = \\) ____（\\(n\\) 为正整数）。",
             "answer": "$\\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)$",
-            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)\\)。",
+            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "若尔当块"],
@@ -32873,7 +32873,7 @@ const questionBank = {
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)，\\(B = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\)，则 \\(AB = \\)（ ）。",
             "options": ["A. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)", "B. \\(\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "C. \\(\\begin{pmatrix} 0 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "D. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)"],
             "answer": "A",
-            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)\\)。选 A。",
+            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\)。选 A。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵乘法"],
@@ -32889,7 +32889,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}\\)，则 \\(A^{2} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)$",
-            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)\\)。",
+            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "对角矩阵"],
@@ -32922,7 +32922,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 7 \\end{pmatrix}\\)，则 \\(A^{-1} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)$",
-            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "逆矩阵"],
@@ -32955,7 +32955,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)，则 \\(A^{10} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)$",
-            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "幂等矩阵", "矩阵幂"],
@@ -32988,7 +32988,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 5 \\end{pmatrix}\\)，求 \\(A^{*} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)$",
-            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\)\\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "伴随矩阵"],
@@ -33021,7 +33021,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}\\)，则 \\(A^{n} = \\) ____（\\(n\\) 为正整数）。",
             "answer": "$\\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)$",
-            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)\\)。",
+            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "若尔当块"],
@@ -38769,7 +38769,7 @@ const questionBank = {
             "mathType": "shusan",
             "type": "选择题",
             "difficulty": 2,
-            "content": "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}\\) 为 \\(A\\) 的属于特征值 1 的线性无关的特征向量，\\(\\alpha_{4}\\) 为 \\(A\\) 的属于特征值 \\(-1\\) 的特征向量，则满足 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\\)\\) 的可逆矩阵 \\(P\\) 为（ ）。",
+            "content": "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}\\) 为 \\(A\\) 的属于特征值 1 的线性无关的特征向量，\\(\\alpha_{4}\\) 为 \\(A\\) 的属于特征值 \\(-1\\) 的特征向量，则满足 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\) 的可逆矩阵 \\(P\\) 为（ ）。",
             "options": ["A. \\((\\alpha_{1}, \\alpha_{2}, \\alpha_{3})\\)", "B. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{2}, \\alpha_{3})\\)", "C. \\((\\alpha_{1} + \\alpha_{3}, \\alpha_{3}, \\alpha_{2})\\)", "D. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{3}, \\alpha_{2})\\)"],
             "answer": "D",
             "analysis": "对角矩阵对角线元素为 \\(1, -1, 1\\)，故 \\(P\\) 的第 2 列应为属于特征值 \\(-1\\) 的特征向量 \\(\\alpha_{4}\\) 的线性组合，第 1、3 列为属于特征值 1 的特征向量的线性组合。根据选项分析，选 D。",
@@ -40269,7 +40269,7 @@ const questionBank = {
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)，\\(B = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\)，则 \\(AB = \\)（ ）。",
             "options": ["A. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)", "B. \\(\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "C. \\(\\begin{pmatrix} 0 & 2 \\\\ 3 & 4 \\end{pmatrix}\\)", "D. \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)"],
             "answer": "A",
-            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\\)\\)。选 A。",
+            "analysis": "\\(AB = \\(\\begin{pmatrix} 1\\cdot0+2\\cdot1 & 1\\cdot1+2\\cdot0 \\\\ 3\\cdot0+4\\cdot1 & 3\\cdot1+4\\cdot0 \\end{pmatrix}\\) = \\(\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}\)。选 A。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵乘法"],
@@ -40285,7 +40285,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}\\)，则 \\(A^{2} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)$",
-            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\\)\\)。",
+            "analysis": "对角矩阵的幂等于对角元素的幂：\\(A^{2} = \\(\\begin{pmatrix} 2^{2} & 0 \\\\ 0 & 3^{2} \\end{pmatrix}\\) = \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "对角矩阵"],
@@ -40318,7 +40318,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 7 \\end{pmatrix}\\)，则 \\(A^{-1} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)$",
-            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(|A| = 7 - 6 = 1\\)。\\(A^{-1} = \\frac{1}{|A|}\\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\) = \\(\\begin{pmatrix} 7 & -2 \\\\ -3 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "逆矩阵"],
@@ -40351,7 +40351,7 @@ const questionBank = {
             "difficulty": 3,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)，则 \\(A^{10} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)$",
-            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\\)\\)。",
+            "analysis": "\\(A\\) 是幂等矩阵（\\(A^{2} = A\\)），故 \\(A^{n} = A\\) 对所有 \\(n \\geq 1\\) 成立。\\(A^{10} = A = \\(\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "幂等矩阵", "矩阵幂"],
@@ -40384,7 +40384,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 5 \\end{pmatrix}\\)，求 \\(A^{*} = \\) ____。",
             "answer": "$\\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)$",
-            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\)\\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\\)\\)。",
+            "analysis": "二阶矩阵 \\(A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\) 的伴随矩阵 \\(A^{*} = \\(\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\)。故 \\(A^{*} = \\(\\begin{pmatrix} 5 & -2 \\\\ -2 & 1 \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "伴随矩阵"],
@@ -40417,7 +40417,7 @@ const questionBank = {
             "difficulty": 4,
             "content": "设 \\(A = \\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}\\)，则 \\(A^{n} = \\) ____（\\(n\\) 为正整数）。",
             "answer": "$\\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)$",
-            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\\)\\)。",
+            "analysis": "令 \\(A = 2I + N\\)，其中 \\(N = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}\\)，\\(N^{2} = 0\\)。\\(A^{n} = (2I+N)^{n} = 2^{n}I + n \\cdot 2^{n-1}N = \\(\\begin{pmatrix} 2^{n} & n \\cdot 2^{n-1} \\\\ 0 & 2^{n} \\end{pmatrix}\)。",
             "source": "自建题目",
             "hint": {
                 "knowledgePoints": ["矩阵", "矩阵幂", "若尔当块"],
@@ -41641,7 +41641,7 @@ const examPaperBank = {
                 { id: "ss23_4", type: "选择", content: "设 \\(a_{n}<b_{n}\\)（\\(n=1,2,\\cdots\\)），且 \\(\\sum a_{n}\\) 与 \\(\\sum b_{n}\\) 均收敛，则\"\\(\\sum a_{n}\\) 绝对收敛\"是\"\\(\\sum b_{n}\\) 绝对收敛\"的（ ）。", options: ["A. 充分必要条件", "B. 充分不必要条件", "C. 必要不充分条件", "D. 既非充分又非必要条件"], answer: "A", analysis: "由 \\(a_{n}<b_{n}\\) 知 \\(\\sum(b_{n}-a_{n})\\) 为收敛的正项级数。若 \\(\\sum a_{n}\\) 绝对收敛，则 \\(|b_{n}|\\leq|b_{n}-a_{n}|+|a_{n}|\\)，由比较判别法知 \\(\\sum b_{n}\\) 绝对收敛；反之亦然。", hint: "利用 b_n - a_n 为正项级数" },
                 { id: "ss23_5", type: "选择", content: "设 \\(A,B\\) 为 \\(n\\) 阶可逆矩阵，\\(E\\) 为 \\(n\\) 阶单位矩阵，\\(A^{*}\\) 为 \\(A\\) 的伴随矩阵，则 \\(\\begin{pmatrix}0 & A\\\\ B & 0\\end{pmatrix}^{*}=\\)（ ）。", options: ["A. \\(\\begin{pmatrix}0 & |A|A^{*}\\\\ |B|B^{*} & 0\\end{pmatrix}\\)", "B. \\(\\begin{pmatrix}0 & |B|B^{*}\\\\ |A|A^{*} & 0\\end{pmatrix}\\)", "C. \\(\\begin{pmatrix}0 & |B|A^{*}\\\\ |A|B^{*} & 0\\end{pmatrix}\\)", "D. \\(\\begin{pmatrix}0 & |A|B^{*}\\\\ |B|A^{*} & 0\\end{pmatrix}\\)"], answer: "B", analysis: "由伴随矩阵公式 \\(M^{*}=|M|M^{-1}\\)，计算 \\(\\begin{pmatrix}0 & A\\\\ B & 0\\end{pmatrix}^{-1}=\\begin{pmatrix}0 & B^{-1}\\\\ A^{-1} & 0\\end{pmatrix}\\)，且行列式为 \\(|A||B|\\)（考虑符号），代入计算得 B 选项正确。", hint: "利用伴随矩阵公式 M* = |M|M^{-1}" },
                 { id: "ss23_6", type: "选择", content: "二次型 \\(f(x_{1},x_{2},x_{3})=(x_{1}+x_{2})^{2}+(x_{1}+x_{3})^{2}-4(x_{2}-x_{3})^{2}\\) 的规范形为（ ）。", options: ["A. \\(y_{1}^{2}+y_{2}^{2}\\)", "B. \\(y_{1}^{2}-y_{2}^{2}\\)", "C. \\(y_{1}^{2}+y_{2}^{2}-4y_{3}^{2}\\)", "D. \\(y_{1}^{2}+y_{2}^{2}-y_{3}^{2}\\)"], answer: "B", analysis: "展开得 \\(f=2x_{1}^{2}-3x_{2}^{2}-3x_{3}^{2}+2x_{1}x_{2}+2x_{1}x_{3}+8x_{2}x_{3}\\)，对应矩阵的特征值为 \\(3,-7,0\\)，正负惯性指数各为 1，故规范形为 \\(y_{1}^{2}-y_{2}^{2}\\)。", hint: "求二次型矩阵的特征值" },
-                { id: "ss23_7", type: "选择", content: "已知向量 \\(\\alpha_{1}=\\(\\begin{pmatrix}2\\\\ 1\\\\ 1\\end{pmatrix}\\)\\), \\(\\alpha_{2}=\\(\\begin{pmatrix}1\\\\ 0\\\\ -1\\end{pmatrix}\\)\\), \\(\\beta_{1}=\\(\\begin{pmatrix}5\\\\ 0\\\\ 3\\end{pmatrix}\\)\\), \\(\\beta_{2}=\\(\\begin{pmatrix}0\\\\ 1\\\\ -1\\end{pmatrix}\\)\\)，若 \\(\\gamma\\) 既可由 \\(\\alpha_{1},\\alpha_{2}\\) 线性表示，也可由 \\(\\beta_{1},\\beta_{2}\\) 线性表示，则 \\(\\gamma=\\)（ ）。", options: ["A. \\(k\\(\\begin{pmatrix}3\\\\ -1\\\\ 1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)", "B. \\(k\\(\\begin{pmatrix}-3\\\\ 1\\\\ -1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)", "C. \\(k\\(\\begin{pmatrix}1\\\\ -1\\\\ 1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)", "D. \\(k\\(\\begin{pmatrix}-1\\\\ 5\\\\ 1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)"], answer: "D", analysis: "设 \\(\\gamma=x_{1}\\alpha_{1}+x_{2}\\alpha_{2}=y_{1}\\beta_{1}+y_{2}\\beta_{2}\\)，解方程组得 \\((x_{1},x_{2})=c(-3,1)\\)，故 \\(\\gamma=-3\\alpha_{1}+\\alpha_{2}=\\(\\begin{pmatrix}-1\\\\ 5\\\\ 1\\end{pmatrix}\\)\\)。", hint: "设 γ=x_{1}α_{1}+x_{2}α_{2}=y_{1}β_{1}+y_{2}β_{2}" },
+                { id: "ss23_7", type: "选择", content: "已知向量 \\(\\alpha_{1}=\\(\\begin{pmatrix}2\\\\ 1\\\\ 1\\end{pmatrix}\), \\(\\alpha_{2}=\\(\\begin{pmatrix}1\\\\ 0\\\\ -1\\end{pmatrix}\), \\(\\beta_{1}=\\(\\begin{pmatrix}5\\\\ 0\\\\ 3\\end{pmatrix}\), \\(\\beta_{2}=\\(\\begin{pmatrix}0\\\\ 1\\\\ -1\\end{pmatrix}\)，若 \\(\\gamma\\) 既可由 \\(\\alpha_{1},\\alpha_{2}\\) 线性表示，也可由 \\(\\beta_{1},\\beta_{2}\\) 线性表示，则 \\(\\gamma=\\)（ ）。", options: ["A. \\(k\\(\\begin{pmatrix}3\\\\ -1\\\\ 1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)", "B. \\(k\\(\\begin{pmatrix}-3\\\\ 1\\\\ -1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)", "C. \\(k\\(\\begin{pmatrix}1\\\\ -1\\\\ 1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)", "D. \\(k\\(\\begin{pmatrix}-1\\\\ 5\\\\ 1\\end{pmatrix}\\), k\\in\\mathbb{R}\\)"], answer: "D", analysis: "设 \\(\\gamma=x_{1}\\alpha_{1}+x_{2}\\alpha_{2}=y_{1}\\beta_{1}+y_{2}\\beta_{2}\\)，解方程组得 \\((x_{1},x_{2})=c(-3,1)\\)，故 \\(\\gamma=-3\\alpha_{1}+\\alpha_{2}=\\(\\begin{pmatrix}-1\\\\ 5\\\\ 1\\end{pmatrix}\)。", hint: "设 γ=x_{1}α_{1}+x_{2}α_{2}=y_{1}β_{1}+y_{2}β_{2}" },
                 { id: "ss23_8", type: "选择", content: "设随机变量 \\(X\\) 服从参数为 1 的泊松分布，则 \\(E(|X-EX|)=\\)（ ）。", options: ["A. \\(\\frac{1}{e}\\)", "B. \\(\\frac{2}{e}\\)", "C. \\(e-1\\)", "D. \\(1\\)"], answer: "C", analysis: "\\(EX=1\\)，\\(E(|X-1|)=\\sum_{k=0}^{\\infty}|k-1|\\frac{e^{-1}}{k!}=e^{-1}+\\sum_{k=1}^{\\infty}(k-1)\\frac{e^{-1}}{k!}=e^{-1}+(e-1)e^{-1}=e-1\\)。", hint: "利用泊松分布的概率公式" },
                 { id: "ss23_9", type: "选择", content: "设 \\(X_{1},X_{2},\\cdots,X_{n}\\) 为来自总体 \\(N(\\mu_{1},\\sigma^{2})\\) 的简单随机样本，\\(Y_{1},Y_{2},\\cdots,Y_{m}\\) 为来自总体 \\(N(\\mu_{2},\\sigma^{2})\\) 的简单随机样本，且两样本相互独立，记 \\(\\bar{X},\\bar{Y}\\) 为样本均值，\\(S_{1}^{2},S_{2}^{2}\\) 为样本方差，则（ ）。", options: ["A. \\(\\frac{S_{1}^{2}}{S_{2}^{2}}\\sim F(n,m)\\)", "B. \\(\\frac{S_{1}^{2}}{S_{2}^{2}}\\sim F(n-1,m-1)\\)", "C. \\(\\frac{(n-1)S_{1}^{2}}{(m-1)S_{2}^{2}}\\sim F(n,m)\\)", "D. \\(\\frac{(n-1)S_{1}^{2}}{(m-1)S_{2}^{2}}\\sim F(n-1,m-1)\\)"], answer: "D", analysis: "由两样本独立，\\(\\frac{(n-1)S_{1}^{2}}{\\sigma^{2}}\\sim\\chi^{2}(n-1)\\)，\\(\\frac{(m-1)S_{2}^{2}}{\\sigma^{2}}\\sim\\chi^{2}(m-1)\\)，故 \\(\\frac{(n-1)S_{1}^{2}}{(m-1)S_{2}^{2}}\\sim F(n-1,m-1)\\)。", hint: "利用卡方分布和 F 分布的定义" },
                 { id: "ss23_10", type: "选择", content: "已知总体 \\(X\\) 服从正态分布 \\(N(\\mu,\\sigma^{2})\\)，其中 \\(\\sigma\\) 为未知参数，\\(X_{1},X_{2}\\) 为来自总体的简单随机样本，记 \\(\\hat{\\sigma}=a|X_{1}-X_{2}|\\)，若 \\(\\hat{\\sigma}\\) 为 \\(\\sigma\\) 的无偏估计，则 \\(a=\\)（ ）。", options: ["A. \\(\\frac{\\sqrt{\\pi}}{2}\\)", "B. \\(\\frac{\\sqrt{2\\pi}}{4}\\)", "C. \\(\\frac{\\sqrt{\\pi}}{\\sqrt{2}}\\)", "D. \\(\\frac{\\sqrt{2\\pi}}{2}\\)"], answer: "A", analysis: "\\(X_{1}-X_{2}\\sim N(0,2\\sigma^{2})\\)，\\(E|X_{1}-X_{2}|=\\sqrt{2}\\sigma\\sqrt{\\frac{2}{\\pi}}=\\frac{2\\sigma}{\\sqrt{\\pi}}\\)，由 \\(E\\hat{\\sigma}=a\\cdot\\frac{2\\sigma}{\\sqrt{\\pi}}=\\sigma\\)，解得 \\(a=\\frac{\\sqrt{\\pi}}{2}\\)。", hint: "X_{1}-X_{2} 服从 N(0,2σ^{2})" },
@@ -41655,7 +41655,7 @@ const examPaperBank = {
                 { id: "ss23_18", type: "解答", content: "（本题满分 12 分）已知平面区域 \\(D=\\{(x,y)\\mid 0\\leq y\\leq x^{2}, 0\\leq x\\leq 1\\}\\)。（1）求平面区域 \\(D\\) 的面积；（2）求平面区域 \\(D\\) 绕 \\(x\\) 轴旋转一周所形成得旋转体的体积。", answer: "（1）\\frac{1}{3}；（2）\\frac{π}{5}", analysis: "（1）面积 \\(S=\\int_{0}^{1}x^{2}dx=\\frac{1}{3}\\)。（2）体积 \\(V=\\pi\\int_{0}^{1}x^{4}dx=\\frac{\\pi}{5}\\)。", hint: "利用定积分求面积和旋转体体积" },
                 { id: "ss23_19", type: "解答", content: "（本题满分 12 分）已知 \\(\\int_{0}^{+\\infty}\\frac{\\ln x}{x^{2}+1}\\,dx\\)，求其值。", answer: "0", analysis: "令 \\(x=\\frac{1}{t}\\)，则原式 \\(=\\int_{+\\infty}^{0}\\frac{-\\ln t}{\\frac{1}{t^{2}}+1}\\cdot\\left(-\\frac{1}{t^{2}}\\right)dt=-\\int_{0}^{+\\infty}\\frac{\\ln t}{t^{2}+1}dt=-I\\)，故 \\(I=-I\\)，即 \\(I=0\\)。", hint: "作倒代换 x=1/t" },
                 { id: "ss23_20", type: "解答", content: "（本题满分 12 分）设函数 \\(f(x)\\) 在 \\([-a,a]\\) 上有二阶连续导数。（1）证明：若 \\(f(0)=0\\)，存在 \\(\\xi\\in(-a,a)\\)，使得 \\(f''(\\xi)=\\frac{f(a)+f(-a)}{2}\\)；（2）若 \\(f(x)\\) 在 \\([-a,a]\\) 上存在极值，证明：存在 \\(\\eta\\in(-a,a)\\)，使得 \\(|f''(\\eta)|\\geq\\frac{|f(a)-f(-a)|}{2a}\\)。", answer: "见解析", analysis: "（1）将 \\(f(x)\\) 在 \\(x=0\\) 处泰勒展开，分别令 \\(x=a\\) 和 \\(x=-a\\)，两式相加，由介值定理得证。（2）设 \\(f(x)\\) 在 \\(x=c\\) 处取得极值，则 \\(f'(c)=0\\)，泰勒展开后两式相减得证。", hint: "使用泰勒展开和介值定理" },
-                { id: "ss23_21", type: "解答", content: "（本题满分 12 分）设矩阵 \\(A\\) 满足对任意的 \\(x_{1},x_{2},x_{3}\\) 均有 \\(A\\(\\begin{pmatrix}x_{1}\\\\ x_{2}\\\\ x_{3}\\end{pmatrix}\\)=\\(\\begin{pmatrix}2x_{1}-x_{2}+x_{3}\\\\ x_{1}+x_{2}+x_{3}\\\\ x_{1}-x_{2}+3x_{3}\\end{pmatrix}\\)\\)。（1）求 \\(A\\)；（2）求可逆矩阵 \\(P\\) 与对角阵 \\(\\Lambda\\)，使得 \\(P^{-1}AP=\\Lambda\\)。", answer: "（1）A=见解析；（2）见解析", analysis: "（1）由 \\(Ae_{1},Ae_{2},Ae_{3}\\) 可得 \\(A=\\begin{pmatrix}2 & -1 & 1\\\\ 1 & 1 & 1\\\\ 1 & -1 & 3\\end{pmatrix}\\)。（2）求 \\(A\\) 的特征值为 \\(2,-2,-1\\)，对应特征向量构成 \\(P\\)。", hint: "利用 A e_i 等于 A 的第 i 列" },
+                { id: "ss23_21", type: "解答", content: "（本题满分 12 分）设矩阵 \\(A\\) 满足对任意的 \\(x_{1},x_{2},x_{3}\\) 均有 \\(A\\(\\begin{pmatrix}x_{1}\\\\ x_{2}\\\\ x_{3}\\end{pmatrix}\\)=\\(\\begin{pmatrix}2x_{1}-x_{2}+x_{3}\\\\ x_{1}+x_{2}+x_{3}\\\\ x_{1}-x_{2}+3x_{3}\\end{pmatrix}\)。（1）求 \\(A\\)；（2）求可逆矩阵 \\(P\\) 与对角阵 \\(\\Lambda\\)，使得 \\(P^{-1}AP=\\Lambda\\)。", answer: "（1）A=见解析；（2）见解析", analysis: "（1）由 \\(Ae_{1},Ae_{2},Ae_{3}\\) 可得 \\(A=\\begin{pmatrix}2 & -1 & 1\\\\ 1 & 1 & 1\\\\ 1 & -1 & 3\\end{pmatrix}\\)。（2）求 \\(A\\) 的特征值为 \\(2,-2,-1\\)，对应特征向量构成 \\(P\\)。", hint: "利用 A e_i 等于 A 的第 i 列" },
                 { id: "ss23_22", type: "解答", content: "（本题满分 12 分）设随机变量 \\(X\\) 的概率密度函数为 \\(f(x)=\\begin{cases}2x, & 0<x<1\\\\ 0, & \\text{其他}\\end{cases}\\)，令 \\(Y=X^{2}\\)。（1）求 \\(Y\\) 的分布函数；（2）求 \\(Y\\) 的概率密度函数；（3）判断 \\(Y\\) 的数学期望是否存在。", answer: "（1）F_Y(y)=y；（2）f_Y(y)=1；（3）存在，E(Y)=\\frac{1}{2}", analysis: "（1）\\(F_{Y}(y)=P\\{Y\\leq y\\}=P\\{X^{2}\\leq y\\}=P\\{X\\leq\\sqrt{y}\\}=\\int_{0}^{\\sqrt{y}}2x\\,dx=y\\)（\\(0<y<1\\)）。（2）\\(f_{Y}(y)=F'_{Y}(y)=1\\)（\\(0<y<1\\)）。（3）\\(E(Y)=\\int_{0}^{1}y\\,dy=\\frac{1}{2}\\)，存在。", hint: "利用分布函数法求随机变量函数的分布" }
             ]
         },
@@ -41709,7 +41709,7 @@ const examPaperBank = {
                 { id: "", type: "选择题", content: "设奇函数 \\(f(x)\\) 在 \\((-\\infty, +\\infty)\\) 上具有连续导数，则 \\(\\int_{0}^{x} [\\cos f(t) + f(t)] dt\\) 是（ ）", options: ["A. 奇函数", "B. 偶函数", "C. 既非奇函数也非偶函数", "D. 既是奇函数又是偶函数"], answer: "B", analysis: "奇函数的积分是偶函数。", hint: "" },
                 { id: "", type: "选择题", content: "设幂级数 \\(\\sum_{n=1}^{\\infty} n a_{n} (x-2)^{n}\\) 的收敛区间为 \\((-2, 6)\\)，则 \\(\\sum_{n=1}^{\\infty} a_{n} (x+1)^{2n}\\) 的收敛区间为（ ）", options: ["A. \\((-2, 6)\\)", "B. \\((-3, 1)\\)", "C. \\((-5, 3)\\)", "D. \\((-17, 15)\\)"], answer: "C", analysis: "由 \\(\\sum n a_{n} (x-2)^{n}\\) 的收敛区间为 \\((-2, 6)\\)，得 \\(\\sum a_{n} (x-2)^{n}\\) 的收敛区间也为 \\((-2, 6)\\)，收敛半径为 4。令 \\(t = (x+1)^{2}\\)，则 \\(|t| < 4\\)，即 \\(|x+1| < 2\\)，\\(x \\in (-3, 1)\\)。", hint: "" },
                 { id: "", type: "选择题", content: "设 4 阶矩阵 \\(A = (a_{ij})\\) 不可逆，\\(a_{12}\\) 的代数余子式 \\(A_{12} \\neq 0\\)，\\(\\alpha_{1}, \\alpha_{2}, \\alpha_{3}, \\alpha_{4}\\) 为矩阵 \\(A\\) 的列向量组，\\(A^*\\) 为 \\(A\\) 的伴随矩阵，则 \\(A^* x = 0\\) 的通解为（ ）", options: ["A. \\(x = k_{1} \\alpha_{1} + k_{2} \\alpha_{2} + k_{3} \\alpha_{3}\\)", "B. \\(x = k_{1} \\alpha_{1} + k_{2} \\alpha_{2} + k_{3} \\alpha_{4}\\)", "C. \\(x = k_{1} \\alpha_{1} + k_{2} \\alpha_{3} + k_{3} \\alpha_{4}\\)", "D. \\(x = k_{1} \\alpha_{2} + k_{2} \\alpha_{3} + k_{3} \\alpha_{4}\\)"], answer: "D", analysis: "由 \\(A\\) 不可逆且 \\(A_{12} \\neq 0\\) 知 \\(r(A) = 3, r(A^*) = 1\\)。\\(A^* A = |A| E = 0\\)，故 \\(A\\) 的列向量均为 \\(A^* x = 0\\) 的解。", hint: "" },
-                { id: "", type: "选择题", content: "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}\\) 为 \\(A\\) 的属于特征值为 1 的线性无关的特征向量，\\(\\alpha_{3}\\) 为 \\(A\\) 的属于 -1 的特征向量，则 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\\)\\) 的可逆矩阵 \\(P\\) 为（ ）", options: ["A. \\((\\alpha_{1} + \\alpha_{3}, \\alpha_{2}, -\\alpha_{3})\\)", "B. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{2}, -\\alpha_{3})\\)", "C. \\((\\alpha_{1} + \\alpha_{3}, -\\alpha_{3}, \\alpha_{2})\\)", "D. \\((\\alpha_{1} + \\alpha_{2}, -\\alpha_{3}, \\alpha_{2})\\)"], answer: "C", analysis: "\\(P\\) 的列向量应为 \\(A\\) 的特征向量，且顺序与对角矩阵的特征值对应。", hint: "" },
+                { id: "", type: "选择题", content: "设 \\(A\\) 为 3 阶矩阵，\\(\\alpha_{1}, \\alpha_{2}\\) 为 \\(A\\) 的属于特征值为 1 的线性无关的特征向量，\\(\\alpha_{3}\\) 为 \\(A\\) 的属于 -1 的特征向量，则 \\(P^{-1}AP = \\(\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}\) 的可逆矩阵 \\(P\\) 为（ ）", options: ["A. \\((\\alpha_{1} + \\alpha_{3}, \\alpha_{2}, -\\alpha_{3})\\)", "B. \\((\\alpha_{1} + \\alpha_{2}, \\alpha_{2}, -\\alpha_{3})\\)", "C. \\((\\alpha_{1} + \\alpha_{3}, -\\alpha_{3}, \\alpha_{2})\\)", "D. \\((\\alpha_{1} + \\alpha_{2}, -\\alpha_{3}, \\alpha_{2})\\)"], answer: "C", analysis: "\\(P\\) 的列向量应为 \\(A\\) 的特征向量，且顺序与对角矩阵的特征值对应。", hint: "" },
                 { id: "", type: "选择题", content: "设 \\(A, B, C\\) 为三个随机事件，且 \\(P(A) = P(B) = P(C) = \\frac{1}{4}, P(AB) = 0, P(AC) = P(BC) = \\frac{1}{12}\\)，则 \\(A, B, C\\) 中恰有一个事件发生的概率为（ ）", options: ["A. \\(\\frac{3}{4}\\)", "B. \\(\\frac{2}{3}\\)", "C. \\(\\frac{1}{2}\\)", "D. \\(\\frac{5}{12}\\)"], answer: "B", analysis: "\\(P(A \\cup B \\cup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC) = \\frac{3}{4} - 0 - \\frac{1}{6} + 0 = \\frac{7}{12}\\)。恰有一个发生 \\(= P(A) + P(B) + P(C) - 2P(AB) - 2P(AC) - 2P(BC) + 3P(ABC)\\)。", hint: "" },
                 { id: "", type: "选择题", content: "设随机变量 \\((X, Y)\\) 服从二维正态分布 \\(N(0, 0; 1, 4; -\\frac{1}{2})\\)，随机变量中服从标准正态分布且与 \\(X\\) 独立的是（ ）", options: ["A. \\(\\frac{(X + Y)}{\\sqrt{5}}\\)", "B. \\(\\frac{(X - Y)}{\\sqrt{5}}\\)", "C. \\(\\frac{(X + Y)}{\\sqrt{3}}\\)", "D. \\(\\frac{(X - Y)}{\\sqrt{3}}\\)"], answer: "B", analysis: "\\(D\\left(\\frac{X - Y}{\\sqrt{5}}\\right) = \\frac{D(X) + D(Y) - 2\\text{Cov}(X,Y)}{5} = \\frac{1 + 4 - 2 \\cdot (-\\frac{1}{2}) \\cdot 1 \\cdot 2}{5} = \\frac{5}{5} = 1\\)，且 \\(\\text{Cov}\\left(X, \\frac{X-Y}{\\sqrt{5}}\\right) = \\frac{D(X) - \\text{Cov}(X,Y)}{\\sqrt{5}} = \\frac{1 + 1}{\\sqrt{5}} = 0\\)。", hint: "" }
             ]
@@ -41736,10 +41736,10 @@ const examPaperBank = {
                 { id: "sy19_16", type: "解答", content: "求微分方程 y'' + 2y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{2+1}=\\frac{1}{3}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy19_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy19_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy19_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy19_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy19_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy19_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy19_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy19_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy19_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41765,10 +41765,10 @@ const examPaperBank = {
                 { id: "sy18_16", type: "解答", content: "求微分方程 y'' + 2y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{2+1}=\\frac{1}{3}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy18_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy18_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy18_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy18_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy18_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy18_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy18_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy18_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy18_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41794,10 +41794,10 @@ const examPaperBank = {
                 { id: "sy17_16", type: "解答", content: "求微分方程 y'' + 2y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{2+1}=\\frac{1}{3}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy17_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy17_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy17_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy17_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy17_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy17_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy17_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy17_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy17_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41823,10 +41823,10 @@ const examPaperBank = {
                 { id: "sy16_16", type: "解答", content: "求微分方程 y'' + 3y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{3}x) + C_{2}\\sin(\\sqrt{3}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+3=0，r=±\\sqrt{3}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{3+1}=\\frac{1}{4}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy16_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy16_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy16_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy16_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy16_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy16_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy16_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy16_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy16_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41852,10 +41852,10 @@ const examPaperBank = {
                 { id: "sy15_16", type: "解答", content: "求微分方程 y'' + y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{x}) + C_{2}\\sin(\\sqrt{x}) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+1=0，r=±\\sqrt{1}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{1+1}=\\frac{1}{2}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy15_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy15_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy15_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy15_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy15_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy15_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy15_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy15_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy15_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41881,10 +41881,10 @@ const examPaperBank = {
                 { id: "sy14_16", type: "解答", content: "求微分方程 y'' + 2y = \\sin x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\sin x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A \\sin x，代入得 A=\\frac{1}{2-1}=1。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy14_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy14_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy14_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy14_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy14_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy14_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy14_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy14_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy14_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41910,10 +41910,10 @@ const examPaperBank = {
                 { id: "sy13_16", type: "解答", content: "求微分方程 y'' + 3y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{3}x) + C_{2}\\sin(\\sqrt{3}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+3=0，r=±\\sqrt{3}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{3+1}=\\frac{1}{4}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy13_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy13_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy13_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy13_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy13_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy13_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy13_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy13_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy13_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41939,10 +41939,10 @@ const examPaperBank = {
                 { id: "sy12_16", type: "解答", content: "求微分方程 y'' + 2y = \\sin x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\sin x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A \\sin x，代入得 A=\\frac{1}{2-1}=1。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy12_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy12_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy12_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy12_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy12_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy12_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy12_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy12_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy12_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41968,10 +41968,10 @@ const examPaperBank = {
                 { id: "sy11_16", type: "解答", content: "求微分方程 y'' + y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{x}) + C_{2}\\sin(\\sqrt{x}) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+1=0，r=±\\sqrt{1}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{1+1}=\\frac{1}{2}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy11_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy11_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy11_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy11_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy11_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy11_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy11_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy11_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy11_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -41997,10 +41997,10 @@ const examPaperBank = {
                 { id: "sy10_16", type: "解答", content: "求微分方程 y'' + 2y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{2+1}=\\frac{1}{3}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy10_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy10_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy10_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy10_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy10_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy10_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy10_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy10_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy10_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -42026,10 +42026,10 @@ const examPaperBank = {
                 { id: "sy09_16", type: "解答", content: "求微分方程 y'' + 3y = \\sin x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{3}x) + C_{2}\\sin(\\sqrt{3}x) + \\frac{1}{2}\\sin x", analysis: "特征方程 r^{2}+3=0，r=±\\sqrt{3}i。设特解 y*=A \\sin x，代入得 A=\\frac{1}{3-1}=\\frac{1}{2}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy09_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy09_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy09_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy09_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy09_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy09_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy09_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy09_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy09_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -42055,10 +42055,10 @@ const examPaperBank = {
                 { id: "sy08_16", type: "解答", content: "求微分方程 y'' + 2y = \\sin x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\sin x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A \\sin x，代入得 A=\\frac{1}{2-1}=1。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy08_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy08_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy08_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy08_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy08_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy08_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy08_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy08_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy08_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -42084,10 +42084,10 @@ const examPaperBank = {
                 { id: "sy07_16", type: "解答", content: "求微分方程 y'' + 2y = \\sin x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{2}x) + C_{2}\\sin(\\sqrt{2}x) + \\sin x", analysis: "特征方程 r^{2}+2=0，r=±\\sqrt{2}i。设特解 y*=A \\sin x，代入得 A=\\frac{1}{2-1}=1。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy07_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy07_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy07_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy07_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy07_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy07_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy07_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy07_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy07_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -42113,10 +42113,10 @@ const examPaperBank = {
                 { id: "sy06_16", type: "解答", content: "求微分方程 y'' + 5y = \\sin x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{5}x) + C_{2}\\sin(\\sqrt{5}x) + \\frac{1}{4}\\sin x", analysis: "特征方程 r^{2}+5=0，r=±\\sqrt{5}i。设特解 y*=A \\sin x，代入得 A=\\frac{1}{5-1}=\\frac{1}{4}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy06_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy06_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy06_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy06_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy06_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy06_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy06_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy06_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy06_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -42142,10 +42142,10 @@ const examPaperBank = {
                 { id: "sy05_16", type: "解答", content: "求微分方程 y'' + y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{x}) + C_{2}\\sin(\\sqrt{x}) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+1=0，r=±\\sqrt{1}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{1+1}=\\frac{1}{2}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy05_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy05_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy05_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy05_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy05_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy05_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy05_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy05_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy05_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -42171,10 +42171,10 @@ const examPaperBank = {
                 { id: "sy04_16", type: "解答", content: "求微分方程 y'' + 3y = \\mathrm{e}^x 的通解。", answer: "y = C_{1}\\cos(\\sqrt{3}x) + C_{2}\\sin(\\sqrt{3}x) + \\frac{1}{6}\\mathrm{e}^x", analysis: "特征方程 r^{2}+3=0，r=±\\sqrt{3}i。设特解 y*=A\\mathrm{e}^x，代入得 A=\\frac{1}{3+1}=\\frac{1}{4}。", hint: "常系数非齐次方程，用待定系数法。" },
                 { id: "sy04_17", type: "解答", content: "设 A = [1 2; 2 1]，求正交矩阵 Q 使 Q^T A Q 为对角阵。", answer: "Q = [\\frac{1}{\\sqrt{2}} \\frac{1}{\\sqrt{2}}; \\frac{1}{\\sqrt{2}} -\\frac{1}{\\sqrt{2}}]，Q^T A Q = [3 0; 0 -1]", analysis: "特征方程 |λI-A|=(λ-1)^{2}-4=0，λ=3,-1。单位化特征向量后得 Q。", hint: "实对称矩阵正交对角化：求特征值、特征向量并单位化。" },
                 { id: "sy04_18", type: "解答", content: "计算曲线积分 ∫_L (2xy - y^{4})dx + (x^{2} - 4xy^{3})dy，L 为从 (0,0) 到 (1,1) 的抛物线 y=x^{2}。", answer: "0", analysis: "验证 \\frac{\\partial Q}{\\partial x}=2x-4y^{3}=\\frac{\\partial P}{\\partial y}，积分与路径无关。取折线 (0,0)→(1,0)→(1,1) 计算得 0。", hint: "判断积分与路径无关后换简单路径。" },
-                { id: "sy04_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_\Omega(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
+                { id: "sy04_19", type: "解答", content: "计算曲面积分 ∬_Σ (x dydz + y dzdx + z dxdy)，其中 Σ 为球面 x^{2}+y^{2}+z^{2}=1 的外侧。", answer: "4π", analysis: "由高斯公式，原式=\iiint_{\Omega}(1+1+1)dV=3·(\\frac{4π}{3})=4π。", hint: "闭曲面积分用高斯公式。" },
                 { id: "sy04_20", type: "解答", content: "求幂级数 Σ(n=1→∞) n x^{n} 的收敛域及和函数。", answer: "(-1,1)，S(x)=\\frac{x}{(1-x)^{2}}", analysis: "收敛半径 R=1，端点发散。S(x)=x·(Σx^{n})'=x·(\\frac{1}{1-x})'=\\frac{x}{(1-x)^{2}}。", hint: "利用等比级数逐项求导。" },
                 { id: "sy04_21", type: "解答", content: "设总体 X~N(μ,σ^{2})，求 σ^{2} 的最大似然估计。", answer: "σ̂^{2} = (\\frac{1}{n})Σ(X_{i} - X̄)^{2}", analysis: "似然函数取对数后对 σ^{2} 求导并令其为 0，解得 σ̂^{2}=(\\frac{1}{n})Σ(X_{i}-X̄)^{2}。", hint: "写出似然函数，取对数求导。" },
-                { id: "sy04_22", type: "解答", content: "计算三重积分 \iiint_\Omega z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
+                { id: "sy04_22", type: "解答", content: "计算三重积分 \iiint_{\Omega} z dxdydz，其中 \Omega 为 x^{2}+y^{2}+z^{2}≤1, z≥0。", answer: "\\frac{π}{4}", analysis: "球坐标：∫_{0}^{1} r^{3}dr·∫_{0}^{\\frac{π}{2}}cosφ sinφ dφ·∫_{0}^{2π}dθ = (\\frac{1}{4})·(\\frac{1}{2})·2π = \\frac{π}{4}。", hint: "半球域用球坐标。" },
                 { id: "sy04_23", type: "解答", content: "将 f(x)=x^{2} 在 [-π,π] 上展开为傅里叶级数。", answer: "\\frac{π^{2}}{3} + Σ(n=1→∞) 4\\frac{(-1)^n}{n^{2}} · \\cos(nx)", analysis: "x^{2} 为偶函数，b_{n}=0。a_{0}=2\\frac{π^{2}}{3}，a_{n}=4\\frac{(-1)^n}{n^{2}}。", hint: "偶函数只有余弦项，用分部积分求系数。" }
             ]
         },
@@ -43563,7 +43563,7 @@ const knowledgeBase = [
       bookRef: { book: '《高等数学》（同济第七版）', page: '第139页' } },
     { id: 'k19', subject: 'gaoshu', chapter: '第五章 多重积分', category: '进阶', name: '三重积分',
       desc: '在空间区域上的积分。可用直角坐标、柱坐标、球坐标计算。',
-      formula: '\\iiint_\\Omega f(x,y,z) dxdydz',
+      formula: '\\iiint_{\\Omega} f(x,y,z) dxdydz',
       keywords: ['三重积分', '柱坐标', '球坐标'], hot: false,
       bookRef: { book: '《高等数学》（同济第七版）', page: '第156页' } },
     { id: 'k20', subject: 'gaoshu', chapter: '第五章 多重积分', category: '应用', name: '曲线曲面积分',
@@ -44023,7 +44023,7 @@ const knowledgeBaseDetail = {
     "大数定律": {
       "title": "大数定律",
       "category": "概率论",
-      "content": "<h2>大数定律</h2><p>大数定律描述了大量随机现象的平均结果具有稳定性，是频率稳定于概率的理论基础。</p><h3>一、切比雪夫不等式（基础工具）</h3><p><strong>定理：</strong>设随机变量 X 的期望 \\(E(X)=\\mu\\) 和方差 \\(D(X)=\\sigma^{2}\\) 都存在，则对任意 \\varepsilon0：</p><p><code>\(P(|X - \\mu | \\ge \\varepsilon ) \\le \\frac{\\sigma^{2}}{\\varepsilon^{2}}\)</code></p><p>等价形式：<code>P(|X - \\mu | < \\varepsilon ) \\ge 1 - \\frac{\\sigma^{2}}{\\varepsilon^{2}}</code></p><p><strong>意义：</strong>方差越小，X 集中在期望附近的概率越大。切比雪夫不等式给出了 X 偏离 \\(\\mu\\) 的概率上界。</p><p><strong>用途：</strong>估计概率、证明大数定律。</p><h3>二、切比雪夫大数定律</h3><p><strong>条件：</strong>设 \\(X_{1}, X_{2}, ..., X_{n}, ...\\) 是<strong>相互独立</strong>的随机变量序列，且存在期望 \\(E(X_{i})=\\mu_{i}\\) 和方差 \\(D(X_{i})\\leC\\)（方差一致有界）。</p><p><strong>结论：</strong>对任意 \\varepsilon0，有</p><p><code>\\lim(n\\to \\infty ) P(|(\\frac{1}{n})\\sum X_{i} - (\\frac{1}{n})\\sum \\mu_{i}| < \\varepsilon ) = 1</code></p><p>即算术平均依概率收敛于期望的算术平均。</p><h3>三、辛钦大数定律（最常用）</h3><p><strong>条件：</strong>设 \\(X_{1}, X_{2}, ..., X_{n}, ...\\) 是<strong>独立同分布</strong>的随机变量序列，且具有有限的期望 \\(E(X_{i})=\\mu\\)。</p><p><strong>结论：</strong>对任意 \\varepsilon0，有</p><p><code>\\lim(n\\to \\infty ) P(|(\\frac{1}{n})\\sum X_{i} - \\mu | < \\varepsilon ) = 1</code></p><p>即<strong>算术平均依概率收敛于数学期望</strong>。</p><p><strong>意义：</strong>这是<strong>用样本均值估计总体期望</strong>的理论依据。注意辛钦大数定律<strong>不要求方差存在</strong>，只要求期望存在。</p><h3>四、伯努利大数定律</h3><p><strong>条件：</strong>设 \\(n_{a}\\) 为 n 重伯努利试验中事件 A 发生的次数，p 为每次试验中 A 发生的概率。</p><p><strong>结论：</strong>对任意 \\varepsilon0，有</p><p><code>\\lim(n\\to \\infty ) P(|\\frac{n_{a}}{n} - p| < \\varepsilon ) = 1</code></p><p>即<strong>频率依概率收敛于概率</strong>。</p><p><strong>意义：</strong>这是<strong>频率代替概率</strong>的理论依据，是统计中\"频率学派\"的基础。伯努利大数定律是辛钦大数定律的特例（取 \\(X_{i}\\) 为 0-1 分布）。</p><h3>五、三个大数定律的关系</h3><ul><li>切比雪夫大数定律：要求独立、方差有界，最一般但条件最强。</li><li>辛钦大数定律：要求独立同分布、期望存在，不要求方差存在。</li><li>伯努利大数定律：辛钦大数定律在 0-1 分布时的特例。</li></ul><h3>六、依概率收敛的定义</h3><p>设 \\({X_{n}}\\) 为随机变量序列，a 为常数，若对任意 \\varepsilon0，有 <code>\\lim(n\\to \\infty ) P(|X_{n} - a| < \\varepsilon ) = 1</code>，则称 \\({X_{n}}\\) <strong>依概率收敛</strong>于 a，记作 <code>\(X_{n} \\to (P) a\)</code>。</p><p><strong>依概率收敛的性质：</strong></p><ul><li>若 \\(X_{n}\\to(P) a\\)，\\(Y_{n}\\to(P) b\\)，则 \\(X_{n}\\pmY_{n}\\to(P) a\\pm \\)。</li><li>若 \\(X_{n}\\to(P) a\\)，\\(Y_{n}\\to(P) b\\)，则 \\(X_{n}\\cdotY_{n}\\to(P) a\\cdotb\\)。</li><li>若 \\(X_{n}\\to(P) a\\)，\\(b\\ne 0\\)，则 \\(\\frac{X_{n}}{Y_{n}}\\to(P) \\frac{a}{b}\\)。</li><li>若 f 连续，\\(X_{n}\\to(P) a\\)，则 \\(f(X_{n})\\to(P) f(a)\\)。</li></ul><h3>七、大数定律的应用</h3><ul><li><strong>估计概率：</strong>用频率 \\(\\frac{n_{a}}{n}\\) 估计概率 p。</li><li><strong>估计期望：</strong>用样本均值 \\((\\frac{1}{n})\\sum X_{i}\\) 估计总体期望 \\(\\mu\\)。</li><li><strong>蒙特卡洛方法：</strong>用大量随机试验的平均结果近似计算积分等。</li></ul>"
+      "content": "<h2>大数定律</h2><p>大数定律描述了大量随机现象的平均结果具有稳定性，是频率稳定于概率的理论基础。</p><h3>一、切比雪夫不等式（基础工具）</h3><p><strong>定理：</strong>设随机变量 X 的期望 \\(E(X)=\\mu\\) 和方差 \\(D(X)=\\sigma^{2}\\) 都存在，则对任意 \\varepsilon0：</p><p><code>\(P(|X - \\mu | \\ge \\varepsilon ) \\le \\frac{\\sigma^{2}}{\\varepsilon^{2}}\)</code></p><p>等价形式：<code>P(|X - \\mu | < \\varepsilon ) \\ge 1 - \\frac{\\sigma^{2}}{\\varepsilon^{2}}</code></p><p><strong>意义：</strong>方差越小，X 集中在期望附近的概率越大。切比雪夫不等式给出了 X 偏离 \\(\\mu\\) 的概率上界。</p><p><strong>用途：</strong>估计概率、证明大数定律。</p><h3>二、切比雪夫大数定律</h3><p><strong>条件：</strong>设 \\(X_{1}, X_{2}, ..., X_{n}, ...\\) 是<strong>相互独立</strong>的随机变量序列，且存在期望 \\(E(X_{i})=\\mu_{i}\\) 和方差 \\(D(X_{i})\\le\\)（方差一致有界）。</p><p><strong>结论：</strong>对任意 \\varepsilon0，有</p><p><code>\\lim(n\\to \\infty ) P(|(\\frac{1}{n})\\sum X_{i} - (\\frac{1}{n})\\sum \\mu_{i}| < \\varepsilon ) = 1</code></p><p>即算术平均依概率收敛于期望的算术平均。</p><h3>三、辛钦大数定律（最常用）</h3><p><strong>条件：</strong>设 \\(X_{1}, X_{2}, ..., X_{n}, ...\\) 是<strong>独立同分布</strong>的随机变量序列，且具有有限的期望 \\(E(X_{i})=\\mu\\)。</p><p><strong>结论：</strong>对任意 \\varepsilon0，有</p><p><code>\\lim(n\\to \\infty ) P(|(\\frac{1}{n})\\sum X_{i} - \\mu | < \\varepsilon ) = 1</code></p><p>即<strong>算术平均依概率收敛于数学期望</strong>。</p><p><strong>意义：</strong>这是<strong>用样本均值估计总体期望</strong>的理论依据。注意辛钦大数定律<strong>不要求方差存在</strong>，只要求期望存在。</p><h3>四、伯努利大数定律</h3><p><strong>条件：</strong>设 \\(n_{a}\\) 为 n 重伯努利试验中事件 A 发生的次数，p 为每次试验中 A 发生的概率。</p><p><strong>结论：</strong>对任意 \\varepsilon0，有</p><p><code>\\lim(n\\to \\infty ) P(|\\frac{n_{a}}{n} - p| < \\varepsilon ) = 1</code></p><p>即<strong>频率依概率收敛于概率</strong>。</p><p><strong>意义：</strong>这是<strong>频率代替概率</strong>的理论依据，是统计中\"频率学派\"的基础。伯努利大数定律是辛钦大数定律的特例（取 \\(X_{i}\\) 为 0-1 分布）。</p><h3>五、三个大数定律的关系</h3><ul><li>切比雪夫大数定律：要求独立、方差有界，最一般但条件最强。</li><li>辛钦大数定律：要求独立同分布、期望存在，不要求方差存在。</li><li>伯努利大数定律：辛钦大数定律在 0-1 分布时的特例。</li></ul><h3>六、依概率收敛的定义</h3><p>设 \\({X_{n}}\\) 为随机变量序列，a 为常数，若对任意 \\varepsilon0，有 <code>\\lim(n\\to \\infty ) P(|X_{n} - a| < \\varepsilon ) = 1</code>，则称 \\({X_{n}}\\) <strong>依概率收敛</strong>于 a，记作 <code>\(X_{n} \\to (P) a\)</code>。</p><p><strong>依概率收敛的性质：</strong></p><ul><li>若 \\(X_{n}\\to(P) a\\)，\\(Y_{n}\\to(P) b\\)，则 \\(X_{n}\\pmY_{n}\\to(P) a\\pm \\)。</li><li>若 \\(X_{n}\\to(P) a\\)，\\(Y_{n}\\to(P) b\\)，则 \\(X_{n}\\cdotY_{n}\\to(P) a\\cdotb\\)。</li><li>若 \\(X_{n}\\to(P) a\\)，\\(b\\ne 0\\)，则 \\(\\frac{X_{n}}{Y_{n}}\\to(P) \\frac{a}{b}\\)。</li><li>若 f 连续，\\(X_{n}\\to(P) a\\)，则 \\(f(X_{n})\\to(P) f(a)\\)。</li></ul><h3>七、大数定律的应用</h3><ul><li><strong>估计概率：</strong>用频率 \\(\\frac{n_{a}}{n}\\) 估计概率 p。</li><li><strong>估计期望：</strong>用样本均值 \\((\\frac{1}{n})\\sum X_{i}\\) 估计总体期望 \\(\\mu\\)。</li><li><strong>蒙特卡洛方法：</strong>用大量随机试验的平均结果近似计算积分等。</li></ul>"
     },
     "中心极限定理": {
       "title": "中心极限定理",
@@ -44144,7 +44144,7 @@ const knowledgeBaseSupplement = {
     "变限积分求导": {
       "title": "变限积分求导",
       "category": "高数",
-      "content": "<h2>变限积分求导</h2><p>变限积分（变上限积分）的求导是微积分基本定理的核心，是求含积分的极限、研究函数性质的重要工具。</p><h3>一、变上限积分的基本求导公式</h3><p>设 f(x) 在 [a,b] 上连续，则变上限积分 <code>\(\\Phi (x) = \\int_{a}^{x} f(t)dt\)</code> 在 [a,b] 上可导，且：</p><p><code>\(\\frac{d}{dx} \\int_{a}^{x} f(t)dt = f(x)\)</code></p><p>即 Φ(x) 是 f(x) 的一个原函数。这一定理称为<strong>原函数存在定理</strong>，说明连续函数必有原函数。</p><h3>二、变限积分的一般求导法则</h3><h4>1. 上限为 x 的函数 \\varphi(x)</h4><p>设 f 连续，\\varphi(x) 可导，则：</p><p><code>\(\\frac{d}{dx} \\int_{a}^{\\varphi (x)} f(t)dt = f(\\varphi (x))\\cdot \\varphi '(x)\)</code></p><h4>2. 下限为 \\psi(x)，上限为 \\varphi(x)</h4><p><code>\(\\frac{d}{dx} \\int_{\\psi (x)}^{\\varphi (x)} f(t)dt = f(\\varphi (x))\\cdot \\varphi '(x) - f(\\psi (x))\\cdot \\psi '(x)\)</code></p><h4>3. 被积函数含 x（先分离）</h4><p>若被积函数为 f(x,t)（含参变量 x），需先将 x 的因子提出积分号外，或通过换元将 x 移到上下限，再用上述法则。</p><p><strong>例：</strong><code>\(\\frac{d}{dx} \\int_{0}^{x} x\\cdot f(t)dt = \\frac{d}{dx} [x\\cdot \\int_{0}^{x} f(t)dt] = \\int_{0}^{x} f(t)dt + x\\cdot f(x)\)</code></p><h3>三、莱布尼茨公式（含参变量积分求导）</h3><p>设 f(x,t) 及 \\frac{\\partial f}{\\partial t} 连续，\\varphi(x)、\\psi(x) 可导，则：</p><p><code>\(\\frac{d}{dx} \\int_{\\psi (x)}^{\\varphi (x)} f(x,t)dt = f(x,\\varphi (x))\\cdot \\varphi '(x) - f(x,\\psi (x))\\cdot \\psi '(x) + \\int_{\\psi (x)}^{\\varphi (x)} \\frac{\\partial f(x,t)}{\\partial x} dt\)</code></p><p>即：上限代入乘上限导 - 下限代入乘下限导 + 积分偏导项。</p><h3>四、重要性质</h3><ul><li>若 f 连续，则 \\int_{a}^{x} f(t)dt 是 f 的原函数，且处处可导。</li><li>变上限积分 Φ(x) 与 f 同奇偶性：f 为奇函数 \\Rightarrow Φ 为偶函数；f 为偶函数 \\Rightarrow Φ 为奇函数（a=0 时）。</li><li>奇函数的全体原函数为偶函数；偶函数的全体原函数中仅有一个为奇函数。</li></ul><h3>五、典型应用</h3><ul><li><strong>求含变限积分的极限：</strong>用洛必达法则时对变限积分求导。</li><li><strong>求变限积分的极值、单调性：</strong>对 Φ(x) 求导分析。</li><li><strong>证明积分等式/不等式：</strong>构造变限积分辅助函数。</li></ul><h3>六、典型例题</h3><p><strong>例1：</strong>求 \\frac{d}{dx} \\int_{0}^{x^{2}} \\sin(t^{2})dt。</p><p>解：= \\sin((x^{2})^{2})\\cdot(x^{2})' = \\sin(x^{4})\\cdot2x = 2x\\cdot\\sin(x^{4})。</p><p><strong>例2：</strong>求 \\lim(x\\to0) [\\int_{0}^{x} \\mathrm{e}^{t^{2}}dt] / x。</p><p>解：\\frac{0}{0} 型，洛必达：= \\lim(x\\to0) \\mathrm{e}^{x^{2}} = 1。</p><p><strong>例3：</strong>设 f(x) 连续且 \\int_{0}^{x} f(t)dt = x^{2}(1+x)，求 f(2)。</p><p>解：两边求导得 f(x) = 2x + 3x^{2}，故 f(2) = 4 + 12 = 16。</p><p><strong>例4：</strong>求 \\frac{d}{dx} \\int_(\\sin x)^{\\cos x} (\\frac{1}{t^{2}})dt。</p><p>解：= (\\frac{1}{\\cos^{2} x})\\cdot(-\\sin x) - (\\frac{1}{\\sin^{2} x})\\cdot\\cos x = -\\tan x\\cdot\\sec x - \\cot x\\cdot\\csc x。</p>"
+      "content": "<h2>变限积分求导</h2><p>变限积分（变上限积分）的求导是微积分基本定理的核心，是求含积分的极限、研究函数性质的重要工具。</p><h3>一、变上限积分的基本求导公式</h3><p>设 f(x) 在 [a,b] 上连续，则变上限积分 <code>\(\\Phi (x) = \\int_{a}^{x} f(t)dt\)</code> 在 [a,b] 上可导，且：</p><p><code>\(\\frac{d}{dx} \\int_{a}^{x} f(t)dt = f(x)\)</code></p><p>即 Φ(x) 是 f(x) 的一个原函数。这一定理称为<strong>原函数存在定理</strong>，说明连续函数必有原函数。</p><h3>二、变限积分的一般求导法则</h3><h4>1. 上限为 x 的函数 \\varphi(x)</h4><p>设 f 连续，\\varphi(x) 可导，则：</p><p><code>\(\\frac{d}{dx} \\int_{a}^{\\varphi (x)} f(t)dt = f(\\varphi (x))\\cdot \\varphi '(x)\)</code></p><h4>2. 下限为 \\psi(x)，上限为 \\varphi(x)</h4><p><code>\(\\frac{d}{dx} \\int_{\\psi (x)}^{\\varphi (x)} f(t)dt = f(\\varphi (x))\\cdot \\varphi '(x) - f(\\psi (x))\\cdot \\psi '(x)\)</code></p><h4>3. 被积函数含 x（先分离）</h4><p>若被积函数为 f(x,t)（含参变量 x），需先将 x 的因子提出积分号外，或通过换元将 x 移到上下限，再用上述法则。</p><p><strong>例：</strong><code>\(\\frac{d}{dx} \\int_{0}^{x} x\\cdot f(t)dt = \\frac{d}{dx} [x\\cdot \\int_{0}^{x} f(t)dt] = \\int_{0}^{x} f(t)dt + x\\cdot f(x)\)</code></p><h3>三、莱布尼茨公式（含参变量积分求导）</h3><p>设 f(x,t) 及 \\frac{\\partial f}{\\partial t} 连续，\\varphi(x)、\\psi(x) 可导，则：</p><p><code>\(\\frac{d}{dx} \\int_{\\psi (x)}^{\\varphi (x)} f(x,t)dt = f(x,\\varphi (x))\\cdot \\varphi '(x) - f(x,\\psi (x))\\cdot \\psi '(x) + \\int_{\\psi (x)}^{\\varphi (x)} \\frac{\\partial f(x,t)}{\\partial x} dt\)</code></p><p>即：上限代入乘上限导 - 下限代入乘下限导 + 积分偏导项。</p><h3>四、重要性质</h3><ul><li>若 f 连续，则 \\int_{a}^{x} f(t)dt 是 f 的原函数，且处处可导。</li><li>变上限积分 Φ(x) 与 f 同奇偶性：f 为奇函数 \\Rightarrow Φ 为偶函数；f 为偶函数 \\Rightarrow Φ 为奇函数（a=0 时）。</li><li>奇函数的全体原函数为偶函数；偶函数的全体原函数中仅有一个为奇函数。</li></ul><h3>五、典型应用</h3><ul><li><strong>求含变限积分的极限：</strong>用洛必达法则时对变限积分求导。</li><li><strong>求变限积分的极值、单调性：</strong>对 Φ(x) 求导分析。</li><li><strong>证明积分等式/不等式：</strong>构造变限积分辅助函数。</li></ul><h3>六、典型例题</h3><p><strong>例1：</strong>求 \\frac{d}{dx} \\int_{0}^{x^{2}} \\sin(t^{2})dt。</p><p>解：= \\sin((x^{2})^{2})\\cdot(x^{2})' = \\sin(x^{4})\\cdot2x = 2x\\cdot\\sin(x^{4})。</p><p><strong>例2：</strong>求 \\lim(x\\to0) [\\int_{0}^{x} \\mathrm{e}^{t^{2}}dt] / x。</p><p>解：\\frac{0}{0} 型，洛必达：= \\lim(x\\to0) \\mathrm{e}^{x^{2}} = 1。</p><p><strong>例3：</strong>设 f(x) 连续且 \\int_{0}^{x} f(t)dt = x^{2}(1+x)，求 f(2)。</p><p>解：两边求导得 f(x) = 2x + 3x^{2}，故 f(2) = 4 + 12 = 16。</p><p><strong>例4：</strong>求 \\frac{d}{dx} \\int_{\\sin x}^{\\cos x} (\\frac{1}{t^{2}})dt。</p><p>解：= (\\frac{1}{\\cos^{2} x})\\cdot(-\\sin x) - (\\frac{1}{\\sin^{2} x})\\cdot\\cos x = -\\tan x\\cdot\\sec x - \\cot x\\cdot\\csc x。</p>"
     },
     "方向导数与梯度": {
       "title": "方向导数与梯度",
@@ -44159,7 +44159,7 @@ const knowledgeBaseSupplement = {
     "三重积分": {
       "title": "三重积分",
       "category": "高数",
-      "content": "<h2>三重积分</h2><p>三重积分是二重积分的推广，用于计算空间立体的体积、质量、重心等。</p><h3>一、三重积分的定义</h3><p>设 f(x,y,z) 在空间有界闭区域 \\Omega 上有界，将 \\Omega 任意分割，作黎曼和 \\sum f(\\xi_{i},\\eta_{i},ζ_{i})\\Delta v_{i}，若极限存在，则称为 f 在 \\Omega 上的<strong>三重积分</strong>，记作：</p><p><code>\\iiint_{\\Omega}f(x,y,z) dv = \\iiint_{\\Omega}f(x,y,z) dx dy dz</code></p><p><strong>几何意义：</strong>当 f\\equiv1 时，\\iiint_\\Omega dv 表示 \\Omega 的体积。</p><h3>二、直角坐标系下的计算</h3><h4>1. 先一后二（先 z 后 x,y）</h4><p>若 \\Omega 可表示为：(x,y)\\inD，z_{1}(x,y) \\le z \\le z_{2}(x,y)，则：</p><p><code>\(\\iiint_{\\Omega}f dv = \\iint_{D} [\\int_{(z_{1})}^{(z_{2})} f(x,y,z) dz] dxdy\)</code></p><h4>2. 先二后一（先 x,y 后 z）</h4><p>若 \\Omega 介于 z=a 与 z=b 之间，截面 D_z 已知，则：</p><p><code>\(\\iiint_{\\Omega}f dv = \\int_{a}^{b} dz \\iint_{(D_{z})} f(x,y,z) dxdy\)</code></p><p>当被积函数只含 z（或截面易算）时，先二后一较方便。</p><h3>三、柱坐标系下的计算</h3><p><strong>坐标变换：</strong>x=r cos\\theta, y=r sin\\theta, z=z，体积元素 <code>\(dv = r dr d\\theta dz\)</code>。</p><p><code>\(\\iiint_{\\Omega}f(x,y,z) dv = \\iiint_{\\Omega}f(r cos\\theta , r sin\\theta , z)\\cdot r dr d\\theta dz\)</code></p><p><strong>适用情形：</strong>积分区域关于 z 轴对称（圆柱、圆锥、旋转抛物面），或被积函数含 x^{2}+y^{2}。</p><h3>四、球坐标系下的计算</h3><p><strong>坐标变换：</strong>x=r sin\\varphi cos\\theta, y=r sin\\varphi sin\\theta, z=r cos\\varphi，其中 r\\ge0, 0\\le\\varphi\\le\\pi, 0\\le\\theta\\le2\\pi。体积元素 <code>\(dv = r^{2} sin\\varphi dr d\\varphi d\\theta \)</code>。</p><p><code>\(\\iiint_{\\Omega}f dv = \\iiint_{\\Omega}f(r sin\\varphi cos\\theta , r sin\\varphi sin\\theta , r cos\\varphi )\\cdot r^{2} sin\\varphi dr d\\varphi d\\theta \)</code></p><p><strong>适用情形：</strong>积分区域为球、球壳、球锥，或被积函数含 x^{2}+y^{2}+z^{2}。</p><h4>常见区域的球坐标表示：</h4><ul><li>球心在原点半径 R 的球：0\\ler\\leR, 0\\le\\varphi\\le\\pi, 0\\le\\theta\\le2\\pi</li><li>上半球：0\\le\\varphi\\le\\frac{\\pi}{2}</li><li>球心在原点的球面：r=R</li></ul><h3>五、三重积分的对称性</h3><ul><li>若 \\Omega 关于某坐标面对称，f 关于对应变量为奇函数 \\Rightarrow 积分为 0。</li><li>偶函数 \\Rightarrow 积分等于对称半区域积分的 2 倍。</li><li>轮换对称性：若 \\Omega 关于 x,y,z 轮换对称，则 \iiintx^{2}dv=\iiinty^{2}dv=\iiintz^{2}dv。</li></ul><h3>六、应用</h3><ul><li><strong>体积：</strong>V = \\iiint_\\Omega dv</li><li><strong>质量：</strong>M = \\iiint_\\Omega \\rho(x,y,z) dv（\\rho 为密度）</li><li><strong>重心：</strong>x̄ = \iiintx\\rho\\frac{dv}{M}，类似 ȳ, z̄</li><li><strong>转动惯量：</strong>I_z = \\iiint(x^{2}+y^{2})\\rhodv</li></ul><h3>七、典型例题</h3><p><strong>例：</strong>计算 \\iiint_\\Omega z dv，其中 \\Omega 由球面 x^{2}+y^{2}+z^{2}=1 与三个坐标面在第一卦限围成。</p><p>解：用球坐标。0\\ler\\le1, 0\\le\\varphi\\le\\frac{\\pi}{2}, 0\\le\\theta\\le\\frac{\\pi}{2}。</p><p>原式 = \\int_{0}^{\\frac{\\pi}{2}} d\\theta \\int_{0}^{\\frac{\\pi}{2}} d\\varphi \\int_{0}1 (r cos\\varphi)\\cdot r^{2} sin\\varphi dr</p><p>= (\\frac{\\pi}{2})\\cdot\\int_{0}^{\\frac{\\pi}{2}} cos\\varphi sin\\varphi d\\varphi \\cdot \\int_{0}1 r^{3} dr = (\\frac{\\pi}{2})\\cdot[\\frac{sin^{2}\\varphi}{2}]_{0}^{\\frac{\\pi}{2}}\\cdot[\\frac{r^{4}}{4}]_{0}1 = (\\frac{\\pi}{2})\\cdot(\\frac{1}{2})\\cdot(\\frac{1}{4}) = \\frac{\\pi}{16}。</p>"
+      "content": "<h2>三重积分</h2><p>三重积分是二重积分的推广，用于计算空间立体的体积、质量、重心等。</p><h3>一、三重积分的定义</h3><p>设 f(x,y,z) 在空间有界闭区域 \\Omega 上有界，将 \\Omega 任意分割，作黎曼和 \\sum f(\\xi_{i},\\eta_{i},ζ_{i})\\Delta v_{i}，若极限存在，则称为 f 在 \\Omega 上的<strong>三重积分</strong>，记作：</p><p><code>\\iiint_{\\Omega}f(x,y,z) dv = \\iiint_{\\Omega}f(x,y,z) dx dy dz</code></p><p><strong>几何意义：</strong>当 f\\equiv1 时，\\iiint_{\\Omega} dv 表示 \\Omega 的体积。</p><h3>二、直角坐标系下的计算</h3><h4>1. 先一后二（先 z 后 x,y）</h4><p>若 \\Omega 可表示为：(x,y)\\inD，z_{1}(x,y) \\le z \\le z_{2}(x,y)，则：</p><p><code>\(\\iiint_{\\Omega}f dv = \\iint_{D} [\\int_{(z_{1})}^{(z_{2})} f(x,y,z) dz] dxdy\)</code></p><h4>2. 先二后一（先 x,y 后 z）</h4><p>若 \\Omega 介于 z=a 与 z=b 之间，截面 D_z 已知，则：</p><p><code>\(\\iiint_{\\Omega}f dv = \\int_{a}^{b} dz \\iint_{(D_{z})} f(x,y,z) dxdy\)</code></p><p>当被积函数只含 z（或截面易算）时，先二后一较方便。</p><h3>三、柱坐标系下的计算</h3><p><strong>坐标变换：</strong>x=r cos\\theta, y=r sin\\theta, z=z，体积元素 <code>\(dv = r dr d\\theta dz\)</code>。</p><p><code>\(\\iiint_{\\Omega}f(x,y,z) dv = \\iiint_{\\Omega}f(r cos\\theta , r sin\\theta , z)\\cdot r dr d\\theta dz\)</code></p><p><strong>适用情形：</strong>积分区域关于 z 轴对称（圆柱、圆锥、旋转抛物面），或被积函数含 x^{2}+y^{2}。</p><h3>四、球坐标系下的计算</h3><p><strong>坐标变换：</strong>x=r sin\\varphi cos\\theta, y=r sin\\varphi sin\\theta, z=r cos\\varphi，其中 r\\ge0, 0\\le\\varphi\\le\\pi, 0\\le\\theta\\le2\\pi。体积元素 <code>\(dv = r^{2} sin\\varphi dr d\\varphi d\\theta \)</code>。</p><p><code>\(\\iiint_{\\Omega}f dv = \\iiint_{\\Omega}f(r sin\\varphi cos\\theta , r sin\\varphi sin\\theta , r cos\\varphi )\\cdot r^{2} sin\\varphi dr d\\varphi d\\theta \)</code></p><p><strong>适用情形：</strong>积分区域为球、球壳、球锥，或被积函数含 x^{2}+y^{2}+z^{2}。</p><h4>常见区域的球坐标表示：</h4><ul><li>球心在原点半径 R 的球：0\\ler\\leR, 0\\le\\varphi\\le\\pi, 0\\le\\theta\\le2\\pi</li><li>上半球：0\\le\\varphi\\le\\frac{\\pi}{2}</li><li>球心在原点的球面：r=R</li></ul><h3>五、三重积分的对称性</h3><ul><li>若 \\Omega 关于某坐标面对称，f 关于对应变量为奇函数 \\Rightarrow 积分为 0。</li><li>偶函数 \\Rightarrow 积分等于对称半区域积分的 2 倍。</li><li>轮换对称性：若 \\Omega 关于 x,y,z 轮换对称，则 \iiintx^{2}dv=\iiinty^{2}dv=\iiintz^{2}dv。</li></ul><h3>六、应用</h3><ul><li><strong>体积：</strong>V = \\iiint_{\\Omega} dv</li><li><strong>质量：</strong>M = \\iiint_{\\Omega} \\rho(x,y,z) dv（\\rho 为密度）</li><li><strong>重心：</strong>x̄ = \iiintx\\rho\\frac{dv}{M}，类似 ȳ, z̄</li><li><strong>转动惯量：</strong>I_z = \\iiint(x^{2}+y^{2})\\rhodv</li></ul><h3>七、典型例题</h3><p><strong>例：</strong>计算 \\iiint_{\\Omega} z dv，其中 \\Omega 由球面 x^{2}+y^{2}+z^{2}=1 与三个坐标面在第一卦限围成。</p><p>解：用球坐标。0\\ler\\le1, 0\\le\\varphi\\le\\frac{\\pi}{2}, 0\\le\\theta\\le\\frac{\\pi}{2}。</p><p>原式 = \\int_{0}^{\\frac{\\pi}{2}} d\\theta \\int_{0}^{\\frac{\\pi}{2}} d\\varphi \\int_{0}1 (r cos\\varphi)\\cdot r^{2} sin\\varphi dr</p><p>= (\\frac{\\pi}{2})\\cdot\\int_{0}^{\\frac{\\pi}{2}} cos\\varphi sin\\varphi d\\varphi \\cdot \\int_{0}1 r^{3} dr = (\\frac{\\pi}{2})\\cdot[\\frac{sin^{2}\\varphi}{2}]_{0}^{\\frac{\\pi}{2}}\\cdot[\\frac{r^{4}}{4}]_{0}1 = (\\frac{\\pi}{2})\\cdot(\\frac{1}{2})\\cdot(\\frac{1}{4}) = \\frac{\\pi}{16}。</p>"
     },
     "曲线曲面积分": {
       "title": "曲线曲面积分",
@@ -44169,7 +44169,7 @@ const knowledgeBaseSupplement = {
     "一阶微分方程": {
       "title": "一阶微分方程",
       "category": "高数",
-      "content": "<h2>一阶微分方程</h2><p>一阶微分方程是微分方程的基础，考研中重点掌握可分离变量、齐次、一阶线性、伯努利方程。</p><h3>一、可分离变量的微分方程</h3><p>形如 <code>g(y)dy = f(x)dx</code> 或 <code>\(\\frac{dy}{dx} = f(x)g(y)\)</code> 的方程。</p><p><strong>解法：</strong>分离变量后两边积分：<code>\(\\int g(y)dy = \\int f(x)dx + C\)</code>。</p><p><strong>例：</strong>\\frac{dy}{dx} = xy。分离：\\frac{dy}{y} = x dx，积分 ln|y| = \\frac{x^{2}}{2} + C，故 y = C\\mathrm{e}^{\\frac{x^{2}}{2}}。</p><h3>二、齐次方程</h3><p>形如 <code>\(\\frac{dy}{dx} = f(\\frac{y}{x})\)</code> 的方程。</p><p><strong>解法：</strong>令 u = \\frac{y}{x}，即 y = ux，则 \\frac{dy}{dx} = u + x\\cdot\\frac{du}{dx}，代入得 <code>\(u + x\\cdot \\frac{du}{dx} = f(u)\)</code>，即 <code>\(x \\frac{du}{dx} = f(u) - u\)</code>，化为可分离变量方程 <code>\(\\frac{du}{f(u)-u} = \\frac{dx}{x}\)</code>，再积分。</p><p><strong>例：</strong>\\frac{dy}{dx} = \\frac{(x+y)}{x} = 1 + \\frac{y}{x}。令 u=\\frac{y}{x}，u+xu'=1+u \\Rightarrow xu'=1 \\Rightarrow du=\\frac{dx}{x} \\Rightarrow u=ln|x|+C，故 y=x(ln|x|+C)。</p><h3>三、一阶线性微分方程</h3><p>形如 <code>y' + P(x)y = Q(x)</code> 的方程。</p><p><strong>通解公式（背！）：</strong></p><p><code>\(y = \\mathrm{e}^{-\\int P(x}dx) \\cdot [\\int Q(x)\\cdot \\mathrm{e}^{\\int P(x}dx) dx + C]\)</code></p><p><strong>推导：</strong>乘以积分因子 \\mu(x)=\\mathrm{e}^{\\int Pdx}，则 (y\\cdot\\mu)' = Q\\cdot\\mu，积分即得。</p><p><strong>例：</strong>y' + (\\frac{1}{x})y = x^{2}。P=\\frac{1}{x}, \\int Pdx=ln|x|, \\mathrm{e}^{\\int Pdx}=x。y = (\\frac{1}{x})[\\int x^{2}\\cdotx dx + C] = (\\frac{1}{x})[\\frac{x^{4}}{4} + C] = \\frac{x^{3}}{4} + \\frac{C}{x}。</p><h3>四、伯努利方程</h3><p>形如 <code>\(y' + P(x)y = Q(x)\\cdot y^{n}\)</code>（n\\ne 0,1）的方程。</p><p><strong>解法：</strong>令 z = y^{1-n}，则 z' = (1-n)y^{-n}\\cdoty'，方程两边乘以 (1-n)y^{-n}：</p><p><code>z' + (1-n)P(x)z = (1-n)Q(x)</code></p><p>化为关于 z 的一阶线性方程，用通解公式求解，再代回 z=y^{1-n}。</p><h3>五、全微分方程</h3><p>若 P(x,y)dx + Q(x,y)dy = 0 满足 \\frac{\\partial P}{\\partial y} = \\frac{\\partial Q}{\\partial x}，则存在 u(x,y) 使 du=0，通解为 u(x,y)=C。</p><p><strong>求 u：</strong>u = \\int_(x_{0})^{x} P(x,y_{0})dx + \\int_(y_{0})^{y} Q(x,y)dy。</p><h3>六、典型例题</h3><p><strong>例1：</strong>求解 y' - y = \\mathrm{e}^{2x}。</p><p>解：一阶线性，P=-1, Q=\\mathrm{e}^{2x}。\\mathrm{e}^{-\\int Pdx}=\\mathrm{e}^{x}。</p><p>y = \\mathrm{e}^{x}\\cdot[\\int\\mathrm{e}^{2x}\\cdot\\mathrm{e}^{-x} dx + C] = \\mathrm{e}^{x}\\cdot[\\int\\mathrm{e}^{x} dx + C] = \\mathrm{e}^{x}\\cdot(\\mathrm{e}^{x} + C) = \\mathrm{e}^{2x} + C\\mathrm{e}^{x}。</p><p><strong>例2：</strong>求解 y' + \\frac{y}{x} = y^{2}\\cdotlnx（伯努利方程，n=2）。</p><p>解：令 z=y^{1-2}=y-1=\\frac{1}{y}，z'=-y'/y^{2}。原式两边乘 -\\frac{1}{y^{2}}：-y'/y^{2} - (\\frac{1}{y})/x = -lnx，即 z' - \\frac{z}{x} = -lnx（关于 z 的一阶线性）。</p><p>P=-\\frac{1}{x}, \\mathrm{e}^{-\\int Pdx}=\\mathrm{e}^{lnx}=x。z = x\\cdot[\\int(-lnx)\\cdot(\\frac{1}{x}) dx + C] = x\\cdot[-\\frac{(\\ln x)^2}{2} + C]。</p><p>故 \\frac{1}{y} = x[C - \\frac{(\\ln x)^2}{2}]，即 y = \\frac{1}{{x[C-\\frac{(\\ln x)^2}{2}]}}。</p>"
+      "content": "<h2>一阶微分方程</h2><p>一阶微分方程是微分方程的基础，考研中重点掌握可分离变量、齐次、一阶线性、伯努利方程。</p><h3>一、可分离变量的微分方程</h3><p>形如 <code>g(y)dy = f(x)dx</code> 或 <code>\(\\frac{dy}{dx} = f(x)g(y)\)</code> 的方程。</p><p><strong>解法：</strong>分离变量后两边积分：<code>\(\\int g(y)dy = \\int f(x)dx + C\)</code>。</p><p><strong>例：</strong>\\frac{dy}{dx} = xy。分离：\\frac{dy}{y} = x dx，积分 ln|y| = \\frac{x^{2}}{2} + C，故 y = C\\mathrm{e}^{\\frac{x^{2}}{2}}。</p><h3>二、齐次方程</h3><p>形如 <code>\(\\frac{dy}{dx} = f(\\frac{y}{x})\)</code> 的方程。</p><p><strong>解法：</strong>令 u = \\frac{y}{x}，即 y = ux，则 \\frac{dy}{dx} = u + x\\cdot\\frac{du}{dx}，代入得 <code>\(u + x\\cdot \\frac{du}{dx} = f(u)\)</code>，即 <code>\(x \\frac{du}{dx} = f(u) - u\)</code>，化为可分离变量方程 <code>\(\\frac{du}{f(u)-u} = \\frac{dx}{x}\)</code>，再积分。</p><p><strong>例：</strong>\\frac{dy}{dx} = \\frac{(x+y)}{x} = 1 + \\frac{y}{x}。令 u=\\frac{y}{x}，u+xu'=1+u \\Rightarrow xu'=1 \\Rightarrow du=\\frac{dx}{x} \\Rightarrow u=ln|x|+C，故 y=x(ln|x|+C)。</p><h3>三、一阶线性微分方程</h3><p>形如 <code>y' + P(x)y = Q(x)</code> 的方程。</p><p><strong>通解公式（背！）：</strong></p><p><code>\(y = \\mathrm{e}^{-\\int P(x}dx) \\cdot [\\int Q(x)\\cdot \\mathrm{e}^{\\int P(x}dx) dx + C]\)</code></p><p><strong>推导：</strong>乘以积分因子 \\mu(x)=\\mathrm{e}^{\\int Pdx}，则 (y\\cdot\\mu)' = Q\\cdot\\mu，积分即得。</p><p><strong>例：</strong>y' + (\\frac{1}{x})y = x^{2}。P=\\frac{1}{x}, \\int Pdx=ln|x|, \\mathrm{e}^{\\int Pdx}=x。y = (\\frac{1}{x})[\\int x^{2}\\cdotx dx + C] = (\\frac{1}{x})[\\frac{x^{4}}{4} + C] = \\frac{x^{3}}{4} + \\frac{C}{x}。</p><h3>四、伯努利方程</h3><p>形如 <code>\(y' + P(x)y = Q(x)\\cdot y^{n}\)</code>（n\\ne 0,1）的方程。</p><p><strong>解法：</strong>令 z = y^{1-n}，则 z' = (1-n)y^{-n}\\cdoty'，方程两边乘以 (1-n)y^{-n}：</p><p><code>z' + (1-n)P(x)z = (1-n)Q(x)</code></p><p>化为关于 z 的一阶线性方程，用通解公式求解，再代回 z=y^{1-n}。</p><h3>五、全微分方程</h3><p>若 P(x,y)dx + Q(x,y)dy = 0 满足 \\frac{\\partial P}{\\partial y} = \\frac{\\partial Q}{\\partial x}，则存在 u(x,y) 使 du=0，通解为 u(x,y)=C。</p><p><strong>求 u：</strong>u = \\int_{x_{0}}^{x} P(x,y_{0})dx + \\int_{y_{0}}^{y} Q(x,y)dy。</p><h3>六、典型例题</h3><p><strong>例1：</strong>求解 y' - y = \\mathrm{e}^{2x}。</p><p>解：一阶线性，P=-1, Q=\\mathrm{e}^{2x}。\\mathrm{e}^{-\\int Pdx}=\\mathrm{e}^{x}。</p><p>y = \\mathrm{e}^{x}\\cdot[\\int\\mathrm{e}^{2x}\\cdot\\mathrm{e}^{-x} dx + C] = \\mathrm{e}^{x}\\cdot[\\int\\mathrm{e}^{x} dx + C] = \\mathrm{e}^{x}\\cdot(\\mathrm{e}^{x} + C) = \\mathrm{e}^{2x} + C\\mathrm{e}^{x}。</p><p><strong>例2：</strong>求解 y' + \\frac{y}{x} = y^{2}\\cdotlnx（伯努利方程，n=2）。</p><p>解：令 z=y^{1-2}=y-1=\\frac{1}{y}，z'=-y'/y^{2}。原式两边乘 -\\frac{1}{y^{2}}：-y'/y^{2} - (\\frac{1}{y})/x = -lnx，即 z' - \\frac{z}{x} = -lnx（关于 z 的一阶线性）。</p><p>P=-\\frac{1}{x}, \\mathrm{e}^{-\\int Pdx}=\\mathrm{e}^{lnx}=x。z = x\\cdot[\\int(-lnx)\\cdot(\\frac{1}{x}) dx + C] = x\\cdot[-\\frac{(\\ln x)^2}{2} + C]。</p><p>故 \\frac{1}{y} = x[C - \\frac{(\\ln x)^2}{2}]，即 y = \\frac{1}{{x[C-\\frac{(\\ln x)^2}{2}]}}。</p>"
     },
     "二阶常系数线性方程": {
       "title": "二阶常系数线性方程",
@@ -44199,7 +44199,7 @@ const knowledgeBaseSupplement = {
     "傅里叶级数": {
       "title": "傅里叶级数",
       "category": "高数",
-      "content": "<h2>傅里叶级数</h2><p>傅里叶级数将周期函数展开为三角级数，是信号处理与振动分析的理论基础。</p><h3>一、三角级数与傅里叶级数</h3><p>形如 <code>\(\\frac{a_{0}}{2} + \\sum (n=1\\to \\infty ) [a_{n}\\cos(nx) + b_{n}\\sin(nx)]\)</code> 的级数称为三角级数。</p><p>设 f(x) 是周期为 2\\pi 的周期函数，若能展开为上述级数，则系数（傅里叶系数）为：</p><p><code>\(a_{n} = (\\frac{1}{\\pi})\\int_{(-\\pi )}^\\pi f(x)\\cos(nx)dx\)</code>（n=0,1,2,...）</p><p><code>\(b_{n} = (\\frac{1}{\\pi})\\int_{(-\\pi )}^\\pi f(x)\\sin(nx)dx\)</code>（n=1,2,...）</p><p>由这些系数确定的三角级数称为 f(x) 的<strong>傅里叶级数</strong>，记作 <code>\(f(x) ~ \\frac{a_{0}}{2} + \\sum [a_{n}\\cos(nx)+b_{n}\\sin(nx)]\)</code>。</p><h3>二、狄利克雷收敛定理</h3><p>若 f(x) 在 [-\\pi,\\pi] 上满足<strong>狄利克雷条件</strong>：</p><ol><li>连续或只有有限个第一类间断点；</li><li>只有有限个极值点（分段单调）。</li></ol><p>则 f(x) 的傅里叶级数收敛，且：</p><ul><li>在连续点 x 处，级数收敛于 f(x)；</li><li>在间断点 x 处，级数收敛于 <code>[f(x^{-})+f(x^{+})]/2</code>（左右极限的算术平均）。</li></ul><h3>三、奇偶函数的傅里叶级数</h3><h4>1. 奇函数</h4><p>若 f(x) 为奇函数，则 a_{n}=0（n=0,1,...），傅里叶级数只含正弦项，称为<strong>正弦级数</strong>：</p><p><code>\(f(x) ~ \\sum b_{n}\\sin(nx)\)</code>，<code>\(b_{n} = (\\frac{2}{\\pi})\\int_{0}^\\pi f(x)\\sin(nx)dx\)</code></p><h4>2. 偶函数</h4><p>若 f(x) 为偶函数，则 b_{n}=0，傅里叶级数只含余弦项，称为<strong>余弦级数</strong>：</p><p><code>\(f(x) ~ \\frac{a_{0}}{2} + \\sum a_{n}\\cos(nx)\)</code>，<code>\(a_{n} = (\\frac{2}{\\pi})\\int_{0}^\\pi f(x)\\cos(nx)dx\)</code></p><h3>四、周期为 2l 的函数</h3><p>若 f(x) 周期为 2l，傅里叶级数为：</p><p><code>\(f(x) ~ \\frac{a_{0}}{2} + \\sum [a_{n}\\cos(n\\pi \\frac{x}{l}) + b_{n}\\sin(n\\pi \\frac{x}{l})]\)</code></p><p><code>\(a_{n} = (\\frac{1}{l})\\int_{(-l)}^{l} f(x)\\cos(n\\pi \\frac{x}{l})dx\)</code>，<code>\(b_{n} = (\\frac{1}{l})\\int_{(-l)}^{l} f(x)\\sin(n\\pi \\frac{x}{l})dx\)</code></p><h3>五、奇偶延拓</h3><p>对定义在 [0,l] 上的非周期函数 f(x)：</p><ul><li><strong>奇延拓：</strong>将 f 延拓为 [-l,l] 上的奇函数，再周期延拓，展开为<strong>正弦级数</strong>。b_{n}=(\\frac{2}{l})\\int_{0}^{l} f(x)\\sin(n\\pi\\frac{x}{l})dx。</li><li><strong>偶延拓：</strong>将 f 延拓为 [-l,l] 上的偶函数，展开为<strong>余弦级数</strong>。a_{n}=(\\frac{2}{l})\\int_{0}^{l} f(x)\\cos(n\\pi\\frac{x}{l})dx。</li></ul><p>在 (0,l) 内延拓后的级数收敛于 f(x)。</p><h3>六、帕塞瓦尔等式</h3><p>若 f(x) 的傅里叶级数收敛于 f(x)，则：</p><p><code>\((\\frac{1}{\\pi})\\int_{(-\\pi )}^\\pi [f(x)]^{2}dx = \\frac{a_{0}^{2}}{2} + \\sum (a_{n}^{2}+b_{n}^{2})\)</code></p><p>可用于求某些数项级数的和。</p><h3>七、典型例题</h3><p><strong>例：</strong>将 f(x)=x（-\\pix\\le\\pi，周期 2\\pi）展开为傅里叶级数，并求 \\sum\\frac{1}{n^{2}}。</p><p>解：f(x)=x 为奇函数，a_{n}=0。</p><p>b_{n}=(\\frac{1}{\\pi})\\int_(-\\pi)^\\pi x \\sin(nx)dx = (\\frac{2}{\\pi})\\int_{0}^\\pi x \\sin(nx)dx = (\\frac{2}{\\pi})\\cdot[-x \\frac{\\cos(nx)}{n} + \\frac{\\sin(nx)}{n^{2}}]_{0}^\\pi = (\\frac{2}{\\pi})\\cdot(-\\pi \\frac{\\cos(n\\pi)}{n}) = \\frac{2(-1)^{n+1}}{n}。</p><p>故 f(x) ~ \\sum \\frac{2(-1)^{n+1}}{n} \\cdot \\sin(nx)。在连续点收敛于 x。</p><p>由帕塞瓦尔等式：(\\frac{1}{\\pi})\\int_(-\\pi)^\\pi x^{2}dx = \\sum[\\frac{2(-1)^{n+1}}{n}]^{2}，左边=(\\frac{1}{\\pi})\\cdot(\\frac{2\\pi^{3}}{3})=2\\frac{\\pi^{2}}{3}，右边=4\\sum\\frac{1}{n^{2}}，故 \\sum\\frac{1}{n^{2}}=\\frac{\\pi^{2}}{6}。</p>"
+      "content": "<h2>傅里叶级数</h2><p>傅里叶级数将周期函数展开为三角级数，是信号处理与振动分析的理论基础。</p><h3>一、三角级数与傅里叶级数</h3><p>形如 <code>\(\\frac{a_{0}}{2} + \\sum (n=1\\to \\infty ) [a_{n}\\cos(nx) + b_{n}\\sin(nx)]\)</code> 的级数称为三角级数。</p><p>设 f(x) 是周期为 2\\pi 的周期函数，若能展开为上述级数，则系数（傅里叶系数）为：</p><p><code>\(a_{n} = (\\frac{1}{\\pi})\\int_{(-\\pi )}^\\pi f(x)\\cos(nx)dx\)</code>（n=0,1,2,...）</p><p><code>\(b_{n} = (\\frac{1}{\\pi})\\int_{(-\\pi )}^\\pi f(x)\\sin(nx)dx\)</code>（n=1,2,...）</p><p>由这些系数确定的三角级数称为 f(x) 的<strong>傅里叶级数</strong>，记作 <code>\(f(x) ~ \\frac{a_{0}}{2} + \\sum [a_{n}\\cos(nx)+b_{n}\\sin(nx)]\)</code>。</p><h3>二、狄利克雷收敛定理</h3><p>若 f(x) 在 [-\\pi,\\pi] 上满足<strong>狄利克雷条件</strong>：</p><ol><li>连续或只有有限个第一类间断点；</li><li>只有有限个极值点（分段单调）。</li></ol><p>则 f(x) 的傅里叶级数收敛，且：</p><ul><li>在连续点 x 处，级数收敛于 f(x)；</li><li>在间断点 x 处，级数收敛于 <code>[f(x^{-})+f(x^{+})]/2</code>（左右极限的算术平均）。</li></ul><h3>三、奇偶函数的傅里叶级数</h3><h4>1. 奇函数</h4><p>若 f(x) 为奇函数，则 a_{n}=0（n=0,1,...），傅里叶级数只含正弦项，称为<strong>正弦级数</strong>：</p><p><code>\(f(x) ~ \\sum b_{n}\\sin(nx)\)</code>，<code>\(b_{n} = (\\frac{2}{\\pi})\\int_{0}^\\pi f(x)\\sin(nx)dx\)</code></p><h4>2. 偶函数</h4><p>若 f(x) 为偶函数，则 b_{n}=0，傅里叶级数只含余弦项，称为<strong>余弦级数</strong>：</p><p><code>\(f(x) ~ \\frac{a_{0}}{2} + \\sum a_{n}\\cos(nx)\)</code>，<code>\(a_{n} = (\\frac{2}{\\pi})\\int_{0}^\\pi f(x)\\cos(nx)dx\)</code></p><h3>四、周期为 2l 的函数</h3><p>若 f(x) 周期为 2l，傅里叶级数为：</p><p><code>\(f(x) ~ \\frac{a_{0}}{2} + \\sum [a_{n}\\cos(n\\pi \\frac{x}{l}) + b_{n}\\sin(n\\pi \\frac{x}{l})]\)</code></p><p><code>\(a_{n} = (\\frac{1}{l})\\int_{(-l)}^{l} f(x)\\cos(n\\pi \\frac{x}{l})dx\)</code>，<code>\(b_{n} = (\\frac{1}{l})\\int_{(-l)}^{l} f(x)\\sin(n\\pi \\frac{x}{l})dx\)</code></p><h3>五、奇偶延拓</h3><p>对定义在 [0,l] 上的非周期函数 f(x)：</p><ul><li><strong>奇延拓：</strong>将 f 延拓为 [-l,l] 上的奇函数，再周期延拓，展开为<strong>正弦级数</strong>。b_{n}=(\\frac{2}{l})\\int_{0}^{l} f(x)\\sin(n\\pi\\frac{x}{l})dx。</li><li><strong>偶延拓：</strong>将 f 延拓为 [-l,l] 上的偶函数，展开为<strong>余弦级数</strong>。a_{n}=(\\frac{2}{l})\\int_{0}^{l} f(x)\\cos(n\\pi\\frac{x}{l})dx。</li></ul><p>在 (0,l) 内延拓后的级数收敛于 f(x)。</p><h3>六、帕塞瓦尔等式</h3><p>若 f(x) 的傅里叶级数收敛于 f(x)，则：</p><p><code>\((\\frac{1}{\\pi})\\int_{(-\\pi )}^\\pi [f(x)]^{2}dx = \\frac{a_{0}^{2}}{2} + \\sum (a_{n}^{2}+b_{n}^{2})\)</code></p><p>可用于求某些数项级数的和。</p><h3>七、典型例题</h3><p><strong>例：</strong>将 f(x)=x（-\\pix\\le\\pi，周期 2\\pi）展开为傅里叶级数，并求 \\sum\\frac{1}{n^{2}}。</p><p>解：f(x)=x 为奇函数，a_{n}=0。</p><p>b_{n}=(\\frac{1}{\\pi})\\int_{-\\pi}^\\pi x \\sin(nx)dx = (\\frac{2}{\\pi})\\int_{0}^\\pi x \\sin(nx)dx = (\\frac{2}{\\pi})\\cdot[-x \\frac{\\cos(nx)}{n} + \\frac{\\sin(nx)}{n^{2}}]_{0}^\\pi = (\\frac{2}{\\pi})\\cdot(-\\pi \\frac{\\cos(n\\pi)}{n}) = \\frac{2(-1)^{n+1}}{n}。</p><p>故 f(x) ~ \\sum \\frac{2(-1)^{n+1}}{n} \\cdot \\sin(nx)。在连续点收敛于 x。</p><p>由帕塞瓦尔等式：(\\frac{1}{\\pi})\\int_{-\\pi}^\\pi x^{2}dx = \\sum[\\frac{2(-1)^{n+1}}{n}]^{2}，左边=(\\frac{1}{\\pi})\\cdot(\\frac{2\\pi^{3}}{3})=2\\frac{\\pi^{2}}{3}，右边=4\\sum\\frac{1}{n^{2}}，故 \\sum\\frac{1}{n^{2}}=\\frac{\\pi^{2}}{6}。</p>"
     }
   },
   "xiandai": {
@@ -44283,7 +44283,7 @@ const knowledgeBaseSupplement = {
     "二维随机变量函数分布": {
       "title": "二维随机变量函数分布",
       "category": "概率论",
-      "content": "<h2>二维随机变量函数的分布</h2><p>已知 (X,Y) 的联合分布，求 Z=g(X,Y) 的分布是二维随机变量的核心问题。</p><h3>一、离散型：直接法</h3><p>将 (X,Y) 的所有可能取值代入 g，合并相同函数值对应的概率。</p><p><code>\(P(Z=z_{k}) = \\sum (g(x_{i},y_{j})=z_{k}) p_{ij}\)</code></p><h3>二、连续型：分布函数法</h3><p><code>\(F_{Z}(z) = P(Z \\le z) = P(g(X,Y) \\le z) = \\iint_{g(x,y)\\le z} f(x,y) dxdy\)</code></p><p>然后 f_Z(z) = F_Z'(z)。这是最通用的方法。</p><h3>三、和的分布 Z=X+Y（卷积公式）</h3><p>若 (X,Y) 联合密度为 f(x,y)，则 Z=X+Y 的密度：</p><p><code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty f(x, z-x) dx = \\int_{-}\\infty^{+}\\infty f(z-y, y) dy\)</code></p><p><strong>独立情形（卷积公式）：</strong>若 X,Y 独立，密度分别为 f_X, f_Y：</p><p><code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty f_{X}(x)\\cdot f_{Y}(z-x) dx\)</code></p><h4>重要结论</h4><ul><li>X~N(\\mu_{1},\\sigma_{1}^{2}), Y~N(\\mu_{2},\\sigma_{2}^{2}) 独立 ⟹ X+Y~N(\\mu_{1}+\\mu_{2}, \\sigma_{1}^{2}+\\sigma_{2}^{2})。</li><li>有限个独立正态变量线性组合仍服从正态分布。</li><li>独立泊松变量之和仍泊松：P(\\lambda_{1})+P(\\lambda_{2})⟹P(\\lambda_{1}+\\lambda_{2})。</li><li>独立 \\Gamma(\\alpha_{1},\\beta)+\\Gamma(\\alpha_{2},\\beta) ⟹ \\Gamma(\\alpha_{1}+\\alpha_{2},\\beta)。</li></ul><h3>四、商的分布 Z=\\frac{X}{Y}</h3><p><code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty |y|\\cdot f(yz, y) dy\)</code></p><p>独立时：<code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty |y|\\cdot f_{X}(yz)\\cdot f_{Y}(y) dy\)</code></p><h3>五、最值的分布</h3><p>设 X_{1},...,X_{n} 独立，分布函数分别为 F_{i}(x)。</p><h4>最大值 M=max(X_{1},...,X_{n})</h4><p><code>\(F_{M}(z) = P(M \\le z) = P(X_{1}\\le z,...,X_{n}\\le z) = \\prod F_{i}(z)\)</code></p><p>独立同分布 F 时：F_M(z) = F^{n}(z)，f_M(z) = n\\cdot F^{n}-1(z)\\cdot f(z)。</p><h4>最小值 N=min(X_{1},...,X_{n})</h4><p><code>\(F_{N}(z) = P(N \\le z) = 1 - P(N >z) = 1 - \\prod (1-F_{i}(z))\)</code></p><p>独立同分布 F 时：F_N(z) = 1-(1-F(z))^{n}，f_N(z) = n\\cdot(1-F(z))^{n-1}\\cdot f(z)。</p><h3>六、典型例题</h3><p><strong>例：</strong>设 X,Y 独立，X~U(0,1), Y~U(0,1)，求 Z=X+Y 的密度。</p><p>解：f_X(x)=1, f_Y(y)=1 (均在 [0,1])。f_Z(z)=\\int f_X(x)f_Y(z-x)dx，需 0\\le x\\le1 且 0\\le z-x\\le1 即 z-1\\le x\\le z。</p><ul><li>0z\\le1：x\\in[0,z]，f_Z(z)=\\int_{0}^{z} dx = z。</li><li>1z2：x\\in[z-1,1]，f_Z(z)=\\int_(z-1)1 dx = 2-z。</li></ul><p>即三角分布：f_Z(z)=z (0z\\le1), 2-z (1z2), 0 其他。</p>"
+      "content": "<h2>二维随机变量函数的分布</h2><p>已知 (X,Y) 的联合分布，求 Z=g(X,Y) 的分布是二维随机变量的核心问题。</p><h3>一、离散型：直接法</h3><p>将 (X,Y) 的所有可能取值代入 g，合并相同函数值对应的概率。</p><p><code>\(P(Z=z_{k}) = \\sum (g(x_{i},y_{j})=z_{k}) p_{ij}\)</code></p><h3>二、连续型：分布函数法</h3><p><code>\(F_{Z}(z) = P(Z \\le z) = P(g(X,Y) \\le z) = \\iint_{g(x,y)\\le z} f(x,y) dxdy\)</code></p><p>然后 f_Z(z) = F_Z'(z)。这是最通用的方法。</p><h3>三、和的分布 Z=X+Y（卷积公式）</h3><p>若 (X,Y) 联合密度为 f(x,y)，则 Z=X+Y 的密度：</p><p><code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty f(x, z-x) dx = \\int_{-}\\infty^{+}\\infty f(z-y, y) dy\)</code></p><p><strong>独立情形（卷积公式）：</strong>若 X,Y 独立，密度分别为 f_X, f_Y：</p><p><code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty f_{X}(x)\\cdot f_{Y}(z-x) dx\)</code></p><h4>重要结论</h4><ul><li>X~N(\\mu_{1},\\sigma_{1}^{2}), Y~N(\\mu_{2},\\sigma_{2}^{2}) 独立 ⟹ X+Y~N(\\mu_{1}+\\mu_{2}, \\sigma_{1}^{2}+\\sigma_{2}^{2})。</li><li>有限个独立正态变量线性组合仍服从正态分布。</li><li>独立泊松变量之和仍泊松：P(\\lambda_{1})+P(\\lambda_{2})⟹P(\\lambda_{1}+\\lambda_{2})。</li><li>独立 \\Gamma(\\alpha_{1},\\beta)+\\Gamma(\\alpha_{2},\\beta) ⟹ \\Gamma(\\alpha_{1}+\\alpha_{2},\\beta)。</li></ul><h3>四、商的分布 Z=\\frac{X}{Y}</h3><p><code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty |y|\\cdot f(yz, y) dy\)</code></p><p>独立时：<code>\(f_{Z}(z) = \\int_{-}\\infty^{+}\\infty |y|\\cdot f_{X}(yz)\\cdot f_{Y}(y) dy\)</code></p><h3>五、最值的分布</h3><p>设 X_{1},...,X_{n} 独立，分布函数分别为 F_{i}(x)。</p><h4>最大值 M=max(X_{1},...,X_{n})</h4><p><code>\(F_{M}(z) = P(M \\le z) = P(X_{1}\\le z,...,X_{n}\\le z) = \\prod F_{i}(z)\)</code></p><p>独立同分布 F 时：F_M(z) = F^{n}(z)，f_M(z) = n\\cdot F^{n}-1(z)\\cdot f(z)。</p><h4>最小值 N=min(X_{1},...,X_{n})</h4><p><code>\(F_{N}(z) = P(N \\le z) = 1 - P(N >z) = 1 - \\prod (1-F_{i}(z))\)</code></p><p>独立同分布 F 时：F_N(z) = 1-(1-F(z))^{n}，f_N(z) = n\\cdot(1-F(z))^{n-1}\\cdot f(z)。</p><h3>六、典型例题</h3><p><strong>例：</strong>设 X,Y 独立，X~U(0,1), Y~U(0,1)，求 Z=X+Y 的密度。</p><p>解：f_X(x)=1, f_Y(y)=1 (均在 [0,1])。f_Z(z)=\\int f_X(x)f_Y(z-x)dx，需 0\\le x\\le1 且 0\\le z-x\\le1 即 z-1\\le x\\le z。</p><ul><li>0z\\le1：x\\in[0,z]，f_Z(z)=\\int_{0}^{z} dx = z。</li><li>1z2：x\\in[z-1,1]，f_Z(z)=\\int_{z-1}1 dx = 2-z。</li></ul><p>即三角分布：f_Z(z)=z (0z\\le1), 2-z (1z2), 0 其他。</p>"
     },
     "矩与协方差矩阵": {
       "title": "矩与协方差矩阵",
